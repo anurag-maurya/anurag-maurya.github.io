@@ -4,9 +4,9 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Anurag Maurya — Personal Desk (anuragmaurya.in)</title>
-  <meta name="description" content="Interactive personal desk and portfolio of Anurag Maurya — Software Engineer building distributed backend systems, Kafka/Redis microservices, and autonomous AI workflows at Delhivery." />
+  <meta name="description" content="Personal website and interactive desk of Anurag Maurya — Software Engineer building distributed backend systems, Kafka/Redis microservices, and autonomous AI workflows at Delhivery." />
 
-  <!-- Google Fonts: Newsreader (editorial serif), Plus Jakarta Sans (UI/body), JetBrains Mono (technical labels) -->
+  <!-- Google Fonts: Newsreader (editorial serif), Plus Jakarta Sans (UI/body), JetBrains Mono (metrics/code) -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400;1,6..72,500&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
@@ -16,67 +16,63 @@
 
   <style>
     /* ==========================================================================
-       1. 3-MODE THEME TOKENS (MIDNIGHT DEFAULT / PAPER / SAGE)
+       1. 3-THEME COLOR TOKENS (MIDNIGHT DEFAULT / PAPER / SAGE)
        ========================================================================== */
     :root,
     [data-theme="midnight"] {
-      --desk-bg: #0F1115;
-      --desk-dot: rgba(243, 241, 236, 0.11);
-      --menubar-bg: rgba(15, 17, 21, 0.88);
-      --win-bg: #161920;
-      --win-bar: #1B1F28;
-      --win-card: #1D212B;
-      --win-subtle: #12151B;
-      --win-border: rgba(255, 255, 255, 0.10);
-      --win-border-active: rgba(255, 255, 255, 0.18);
-      --ink: #F3F1EC;
-      --ink-body: #D1D5DB;
-      --ink-muted: #9CA3AF;
-      --accent: #E06D53;
-      --accent-hover: #EB7D64;
-      --accent-soft: rgba(224, 109, 83, 0.14);
-      --accent-border: rgba(224, 109, 83, 0.36);
+      --desk-bg: #0E0F12;
+      --desk-dot: rgba(242, 239, 233, 0.11);
+      --menubar-bg: rgba(14, 15, 18, 0.88);
+      --win-bg: #16181D;
+      --win-bar: #1B1E25;
+      --win-card: #1D2028;
+      --win-subtle: #121419;
+      --win-border: #262933;
+      --ink: #F2EFE9;
+      --ink-body: #D2D5DD;
+      --ink-muted: #9BA0AE;
+      --accent: #E06D4B;
+      --accent-hover: #EB7D5B;
+      --accent-soft: rgba(224, 109, 75, 0.14);
+      --accent-border: rgba(224, 109, 75, 0.36);
       --secondary: #68B899;
       --secondary-soft: rgba(104, 184, 153, 0.13);
       --secondary-border: rgba(104, 184, 153, 0.30);
-      --sticky-bg: #262219;
+      --sticky-bg: #252118;
       --sticky-border: rgba(224, 184, 108, 0.28);
       --sticky-ink: #F1E8CE;
       --sticky-muted: #C2B184;
-      --polaroid-bg: #1B1F28;
-      --polaroid-border: rgba(255, 255, 255, 0.11);
-      --tape-bg: rgba(124, 118, 104, 0.42);
-      --tape-border: rgba(255, 255, 255, 0.16);
-      --dock-bg: rgba(22, 25, 32, 0.86);
+      --polaroid-bg: #1B1E25;
+      --polaroid-border: #2A2E39;
+      --tape-bg: rgba(132, 125, 110, 0.38);
+      --tape-border: rgba(255, 255, 255, 0.14);
+      --dock-bg: rgba(22, 24, 29, 0.88);
       --dock-border: rgba(255, 255, 255, 0.12);
-      --pill-bg: #0D0F13;
-      --pill-active-bg: #262B36;
-      --btn-primary-bg: #E06D53;
-      --btn-primary-ink: #0F1115;
-      --scrollbar-thumb: rgba(255, 255, 255, 0.18);
-      --shadow-win: 0 22px 50px -16px rgba(0, 0, 0, 0.62), 0 2px 10px -2px rgba(0, 0, 0, 0.36);
-      --shadow-win-active: 0 32px 68px -16px rgba(0, 0, 0, 0.78), 0 4px 18px -3px rgba(0, 0, 0, 0.48);
-      --shadow-polaroid: 0 20px 38px -12px rgba(0, 0, 0, 0.68), 0 2px 8px rgba(0, 0, 0, 0.38);
+      --pill-bg: #0B0C0F;
+      --pill-active-bg: #252934;
+      --btn-primary-bg: #E06D4B;
+      --btn-primary-ink: #0E0F12;
+      --shadow-win: 0 24px 52px -18px rgba(0, 0, 0, 0.65), 0 2px 10px rgba(0, 0, 0, 0.35);
+      --shadow-polaroid: 0 18px 36px -14px rgba(0, 0, 0, 0.68), 0 2px 8px rgba(0, 0, 0, 0.35);
       --shadow-dock: 0 20px 44px -10px rgba(0, 0, 0, 0.72), 0 2px 12px rgba(0, 0, 0, 0.42);
     }
 
     [data-theme="paper"] {
-      --desk-bg: #F4F0E8;
-      --desk-dot: rgba(28, 27, 24, 0.16);
-      --menubar-bg: rgba(252, 251, 247, 0.88);
-      --win-bg: #FCFBF7;
+      --desk-bg: #F3EFE6;
+      --desk-dot: rgba(26, 25, 23, 0.15);
+      --menubar-bg: rgba(252, 251, 248, 0.88);
+      --win-bg: #FCFBF8;
       --win-bar: #F3EFE6;
       --win-card: #FFFFFF;
       --win-subtle: #F4EFE6;
       --win-border: #DFD8CA;
-      --win-border-active: #C8BFAE;
-      --ink: #1C1B18;
+      --ink: #1A1917;
       --ink-body: #3E3A33;
       --ink-muted: #686156;
-      --accent: #C84B31;
-      --accent-hover: #AE3E27;
-      --accent-soft: rgba(200, 75, 49, 0.10);
-      --accent-border: rgba(200, 75, 49, 0.28);
+      --accent: #C84B28;
+      --accent-hover: #AE3E20;
+      --accent-soft: rgba(200, 75, 40, 0.10);
+      --accent-border: rgba(200, 75, 40, 0.28);
       --secondary: #3B6454;
       --secondary-soft: rgba(59, 100, 84, 0.10);
       --secondary-border: rgba(59, 100, 84, 0.26);
@@ -86,38 +82,35 @@
       --sticky-muted: #7C692B;
       --polaroid-bg: #FFFEFA;
       --polaroid-border: #E3DCCE;
-      --tape-bg: rgba(235, 223, 196, 0.76);
+      --tape-bg: rgba(235, 223, 196, 0.78);
       --tape-border: rgba(182, 168, 140, 0.45);
-      --dock-bg: rgba(252, 251, 247, 0.88);
+      --dock-bg: rgba(252, 251, 248, 0.90);
       --dock-border: rgba(223, 216, 202, 0.96);
       --pill-bg: #EAE4D8;
       --pill-active-bg: #FFFFFF;
-      --btn-primary-bg: #1C1B18;
-      --btn-primary-ink: #FCFBF7;
-      --scrollbar-thumb: #CFC6B6;
-      --shadow-win: 0 18px 42px -18px rgba(28, 27, 24, 0.18), 0 2px 8px -2px rgba(28, 27, 24, 0.08);
-      --shadow-win-active: 0 28px 60px -18px rgba(28, 27, 24, 0.28), 0 4px 14px -3px rgba(28, 27, 24, 0.12);
-      --shadow-polaroid: 0 14px 30px -12px rgba(28, 27, 24, 0.22), 0 2px 6px rgba(28, 27, 24, 0.08);
-      --shadow-dock: 0 16px 36px -12px rgba(28, 27, 24, 0.22), 0 2px 8px rgba(28, 27, 24, 0.06);
+      --btn-primary-bg: #1A1917;
+      --btn-primary-ink: #FCFBF8;
+      --shadow-win: 0 20px 44px -18px rgba(26, 25, 23, 0.16), 0 2px 8px rgba(26, 25, 23, 0.06);
+      --shadow-polaroid: 0 14px 30px -12px rgba(26, 25, 23, 0.20), 0 2px 6px rgba(26, 25, 23, 0.08);
+      --shadow-dock: 0 16px 36px -12px rgba(26, 25, 23, 0.22), 0 2px 8px rgba(26, 25, 23, 0.06);
     }
 
     [data-theme="sage"] {
-      --desk-bg: #E6ECE7;
-      --desk-dot: rgba(26, 38, 31, 0.16);
-      --menubar-bg: rgba(247, 250, 248, 0.88);
-      --win-bg: #F7FAF8;
-      --win-bar: #ECF3EE;
+      --desk-bg: #E7ECE7;
+      --desk-dot: rgba(24, 36, 29, 0.15);
+      --menubar-bg: rgba(247, 249, 247, 0.88);
+      --win-bg: #F7F9F7;
+      --win-bar: #ECF2ED;
       --win-card: #FFFFFF;
-      --win-subtle: #EDF4EF;
+      --win-subtle: #EDF3EE;
       --win-border: #CEDCD2;
-      --win-border-active: #B2C7B8;
-      --ink: #1A261F;
+      --ink: #18241D;
       --ink-body: #314238;
       --ink-muted: #566A5E;
-      --accent: #2E6F52;
-      --accent-hover: #245941;
-      --accent-soft: rgba(46, 111, 82, 0.11);
-      --accent-border: rgba(46, 111, 82, 0.28);
+      --accent: #2D6A4F;
+      --accent-hover: #23553F;
+      --accent-soft: rgba(45, 106, 79, 0.11);
+      --accent-border: rgba(45, 106, 79, 0.28);
       --secondary: #486C5B;
       --secondary-soft: rgba(72, 108, 91, 0.11);
       --secondary-border: rgba(72, 108, 91, 0.26);
@@ -127,35 +120,45 @@
       --sticky-muted: #4C6C57;
       --polaroid-bg: #FCFDFC;
       --polaroid-border: #D2E0D5;
-      --tape-bg: rgba(203, 220, 206, 0.72);
+      --tape-bg: rgba(203, 220, 206, 0.74);
       --tape-border: rgba(154, 178, 160, 0.45);
-      --dock-bg: rgba(247, 250, 248, 0.88);
+      --dock-bg: rgba(247, 249, 247, 0.90);
       --dock-border: rgba(206, 220, 210, 0.96);
       --pill-bg: #DCE6DE;
       --pill-active-bg: #FFFFFF;
-      --btn-primary-bg: #1A261F;
-      --btn-primary-ink: #F7FAF8;
-      --scrollbar-thumb: #BBD0C0;
-      --shadow-win: 0 18px 42px -18px rgba(26, 38, 31, 0.17), 0 2px 8px -2px rgba(26, 38, 31, 0.07);
-      --shadow-win-active: 0 28px 60px -18px rgba(26, 38, 31, 0.25), 0 4px 14px -3px rgba(26, 38, 31, 0.11);
-      --shadow-polaroid: 0 14px 30px -12px rgba(26, 38, 31, 0.20), 0 2px 6px rgba(26, 38, 31, 0.08);
-      --shadow-dock: 0 16px 36px -12px rgba(26, 38, 31, 0.20), 0 2px 8px rgba(26, 38, 31, 0.06);
+      --btn-primary-bg: #18241D;
+      --btn-primary-ink: #F7F9F7;
+      --shadow-win: 0 20px 44px -18px rgba(24, 36, 29, 0.16), 0 2px 8px rgba(24, 36, 29, 0.06);
+      --shadow-polaroid: 0 14px 30px -12px rgba(24, 36, 29, 0.19), 0 2px 6px rgba(24, 36, 29, 0.08);
+      --shadow-dock: 0 16px 36px -12px rgba(24, 36, 29, 0.20), 0 2px 8px rgba(24, 36, 29, 0.06);
     }
 
+    /* ==========================================================================
+       2. NATURAL SCROLLING BASE (ZERO 100vh / overflow:hidden LOCKS)
+       ========================================================================== */
     * {
       box-sizing: border-box;
     }
 
-    html, body {
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
       margin: 0;
       padding: 0;
+      min-height: 100vh;
+      overflow-x: hidden;
+      overflow-y: auto;
       background-color: var(--desk-bg);
+      background-image: radial-gradient(var(--desk-dot) 1px, transparent 1px);
+      background-size: 22px 22px;
       color: var(--ink);
       font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
       font-size: 15px;
-      line-height: 1.55;
+      line-height: 1.6;
       -webkit-font-smoothing: antialiased;
-      transition: background-color 0.28s ease, color 0.28s ease;
+      transition: background-color 0.25s ease, color 0.25s ease;
     }
 
     .font-serif-editorial {
@@ -168,14 +171,7 @@
     }
 
     .theme-surface {
-      transition: background-color 0.26s ease, border-color 0.26s ease, color 0.26s ease, box-shadow 0.26s ease;
-    }
-
-    /* Desk Dot-Grid Canvas */
-    .desk-surface {
-      background-color: var(--desk-bg);
-      background-image: radial-gradient(var(--desk-dot) 1px, transparent 1px);
-      background-size: 22px 22px;
+      transition: background-color 0.25s ease, border-color 0.25s ease, color 0.25s ease, box-shadow 0.25s ease;
     }
 
     /* Semantic Utilities */
@@ -210,9 +206,13 @@
     }
 
     /* ==========================================================================
-       2. TOP MENUBAR & 3-WAY THEME TOGGLE
+       3. STICKY TOP MENUBAR & 3-THEME PILL SWITCHER
        ========================================================================== */
     .top-menubar {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      height: 44px;
       background-color: var(--menubar-bg);
       border-bottom: 1px solid var(--win-border);
       backdrop-filter: blur(14px);
@@ -233,7 +233,7 @@
       font-family: 'JetBrains Mono', monospace;
       font-size: 10.5px;
       line-height: 1;
-      padding: 4px 8px;
+      padding: 5px 8px;
       border-radius: 999px;
       color: var(--ink-muted);
       display: inline-flex;
@@ -245,9 +245,7 @@
       transition: background-color 0.2s ease, color 0.2s ease, box-shadow 0.2s ease;
     }
 
-    .theme-btn:hover {
-      color: var(--ink);
-    }
+    .theme-btn:hover { color: var(--ink); }
 
     .theme-btn.is-active {
       background-color: var(--pill-active-bg);
@@ -265,171 +263,83 @@
     }
 
     /* ==========================================================================
-       3. DESKTOP CENTERED STAGE (>= 960px) VS MOBILE APP-SWITCHER (< 960px)
+       4. NORMAL-FLOW RESPONSIVE DESK GRID (DESKTOP >= 920px, MOBILE < 920px)
        ========================================================================== */
-    @media (min-width: 960px) {
-      html, body {
-        height: 100%;
-        overflow: hidden;
-      }
-
-      #desk-canvas {
-        position: relative;
-        width: 100vw;
-        height: 100vh;
-        overflow: hidden;
-      }
-
-      .os-window {
-        position: absolute;
-        display: flex;
-        flex-direction: column;
-        background-color: var(--win-bg);
-        border: 1px solid var(--win-border);
-        border-radius: 14px;
-        box-shadow: var(--shadow-win);
-        transition: box-shadow 0.2s ease, opacity 0.2s ease, transform 0.22s cubic-bezier(0.22, 1, 0.36, 1), background-color 0.26s ease, border-color 0.26s ease;
-        overflow: hidden;
-        max-height: calc(100vh - 165px);
-      }
-
-      .os-window.is-focused {
-        box-shadow: var(--shadow-win-active);
-        border-color: var(--win-border-active);
-      }
-
-      .os-window.is-closed {
-        opacity: 0;
-        pointer-events: none;
-        transform: scale(0.965) translateY(10px);
-      }
-
-      .os-window.is-expanded {
-        max-height: calc(100vh - 144px) !important;
-      }
-
-      .desk-item {
-        position: absolute;
-        user-select: none;
-        touch-action: none;
-      }
-
-      .mobile-only {
-        display: none !important;
-      }
+    .desk-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 24px 16px 115px;
     }
 
-    @media (max-width: 959px) {
-      body {
-        padding-top: 48px;
-        padding-bottom: 98px;
-        min-height: 100vh;
-        overflow-x: hidden;
+    .desk-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 18px;
+      align-items: start;
+    }
+
+    .desktop-sidebar {
+      display: none;
+    }
+
+    .mobile-profile-card {
+      display: flex;
+      background-color: var(--win-bg);
+      border: 1px solid var(--win-border);
+      border-radius: 14px;
+      padding: 12px 14px;
+      box-shadow: var(--shadow-win);
+    }
+
+    @media (min-width: 920px) {
+      .desk-container {
+        padding: 28px 24px 124px;
       }
 
-      #desk-canvas {
-        width: 100%;
-        padding: 12px 12px 24px;
-        display: flex;
-        flex-direction: column;
-        gap: 14px;
+      .desk-grid {
+        grid-template-columns: 280px 1fr;
+        gap: 28px;
       }
 
-      .desk-item {
-        position: relative !important;
-        left: auto !important;
-        top: auto !important;
-        width: 100% !important;
-        transform: none !important;
+      .desk-grid.focus-mode {
+        grid-template-columns: 1fr;
       }
 
-      .os-window {
-        position: relative !important;
-        left: auto !important;
-        top: auto !important;
-        width: 100% !important;
-        height: auto !important;
-        max-height: none !important;
-        background-color: var(--win-bg);
-        border: 1px solid var(--win-border);
-        border-radius: 14px;
-        box-shadow: var(--shadow-win);
-        overflow: hidden;
+      .desk-grid.focus-mode .desktop-sidebar {
         display: none;
       }
 
-      .os-window.mobile-active {
+      .desktop-sidebar {
         display: flex;
         flex-direction: column;
-        animation: fadeUpMobile 0.22s ease;
+        gap: 22px;
+        position: sticky;
+        top: 72px;
       }
 
-      .desktop-only {
-        display: none !important;
+      .mobile-profile-card {
+        display: none;
       }
-    }
-
-    @keyframes fadeUpMobile {
-      from { opacity: 0; transform: translateY(8px); }
-      to { opacity: 1; transform: translateY(0); }
     }
 
     /* ==========================================================================
-       4. WINDOW CHROME, TRAFFIC LIGHTS, POLAROID & STICKY NOTE
+       5. POLAROID, STICKY NOTE & OS WINDOW CARD
        ========================================================================== */
-    .win-titlebar {
-      height: 40px;
-      min-height: 40px;
-      background-color: var(--win-bar);
-      border-bottom: 1px solid var(--win-border);
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 0 14px;
-      cursor: grab;
-      user-select: none;
-      touch-action: none;
-      transition: background-color 0.26s ease, border-color 0.26s ease;
+    .polaroid-card {
+      position: relative;
+      background: var(--polaroid-bg);
+      border: 1px solid var(--polaroid-border);
+      box-shadow: var(--shadow-polaroid);
+      border-radius: 8px;
+      padding: 11px 11px 16px;
+      transform: rotate(-1.2deg);
+      transition: transform 0.25s ease, background-color 0.25s ease, border-color 0.25s ease;
     }
 
-    .win-titlebar:active {
-      cursor: grabbing;
+    .polaroid-card:hover {
+      transform: rotate(0deg);
     }
 
-    .traffic-dot {
-      width: 12px;
-      height: 12px;
-      border-radius: 999px;
-      border: 1px solid rgba(0, 0, 0, 0.14);
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      transition: transform 0.15s ease, opacity 0.15s ease;
-    }
-
-    .traffic-dot:hover {
-      transform: scale(1.1);
-      opacity: 0.9;
-    }
-
-    .win-body {
-      overflow-y: auto;
-      overscroll-behavior: contain;
-      scrollbar-width: thin;
-      scrollbar-color: var(--scrollbar-thumb) transparent;
-    }
-
-    .win-body::-webkit-scrollbar {
-      width: 6px;
-      height: 6px;
-    }
-
-    .win-body::-webkit-scrollbar-thumb {
-      background-color: var(--scrollbar-thumb);
-      border-radius: 999px;
-    }
-
-    /* Washi Tape on Polaroid */
     .washi-tape {
       position: absolute;
       top: -11px;
@@ -445,44 +355,103 @@
       pointer-events: none;
     }
 
-    .polaroid-card {
-      background: var(--polaroid-bg);
-      border: 1px solid var(--polaroid-border);
-      box-shadow: var(--shadow-polaroid);
-      border-radius: 6px;
-      padding: 10px 10px 15px;
-      cursor: grab;
-      transition: background-color 0.26s ease, border-color 0.26s ease, box-shadow 0.26s ease;
-    }
-
-    .polaroid-card:active {
-      cursor: grabbing;
-    }
-
     .sticky-note {
       background: var(--sticky-bg);
       border: 1px solid var(--sticky-border);
       color: var(--sticky-ink);
-      box-shadow: 0 14px 28px -14px rgba(0, 0, 0, 0.34);
+      box-shadow: 0 14px 28px -14px rgba(0, 0, 0, 0.30);
       border-radius: 6px 6px 20px 6px;
-      cursor: grab;
-      transition: background-color 0.26s ease, border-color 0.26s ease, color 0.26s ease;
+      transform: rotate(0.9deg);
+      transition: transform 0.25s ease, background-color 0.25s ease, border-color 0.25s ease;
     }
 
-    .sticky-note:active {
-      cursor: grabbing;
+    .sticky-note:hover {
+      transform: rotate(0deg);
     }
 
-    /* ==========================================================================
-       5. SYSTEMS EXPLORER & ALWAYS-VISIBLE FIXED BOTTOM DOCK
-       ========================================================================== */
-    .sys-file-btn {
-      border: 1px solid transparent;
+    .os-window {
+      background-color: var(--win-bg);
+      border: 1px solid var(--win-border);
+      border-radius: 14px;
+      box-shadow: var(--shadow-win);
+      overflow: hidden;
+    }
+
+    .win-titlebar {
+      height: 42px;
+      background-color: var(--win-bar);
+      border-bottom: 1px solid var(--win-border);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 16px;
+    }
+
+    .traffic-dot {
+      width: 12px;
+      height: 12px;
+      border-radius: 999px;
+      border: 1px solid rgba(0, 0, 0, 0.14);
+      display: inline-block;
+      transition: transform 0.15s ease, opacity 0.15s ease;
+    }
+
+    button.traffic-dot {
+      cursor: pointer;
+    }
+
+    button.traffic-dot:hover {
+      transform: scale(1.12);
+    }
+
+    /* App Views */
+    .app-view {
+      display: none;
+    }
+
+    .app-view.is-active {
+      display: block;
+      animation: fadePanel 0.2s ease;
+    }
+
+    @keyframes fadePanel {
+      from { opacity: 0; transform: translateY(4px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Filter Pills & Systems Explorer */
+    .filter-pill {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 11px;
+      padding: 5px 11px;
+      border-radius: 999px;
+      border: 1px solid var(--win-border);
+      background-color: var(--win-subtle);
+      color: var(--ink-muted);
+      cursor: pointer;
+      transition: all 0.18s ease;
+    }
+
+    .filter-pill:hover {
       color: var(--ink);
-      transition: background-color 0.16s ease, color 0.16s ease, border-color 0.16s ease;
+      border-color: var(--accent-border);
+    }
+
+    .filter-pill.is-active {
+      background-color: var(--accent-soft);
+      color: var(--accent);
+      border-color: var(--accent-border);
+    }
+
+    .sys-file-btn {
+      border: 1px solid var(--win-border);
+      background-color: var(--win-card);
+      color: var(--ink);
+      transition: all 0.16s ease;
     }
 
     .sys-file-btn:hover {
+      border-color: var(--accent-border);
       background-color: var(--accent-soft);
     }
 
@@ -501,14 +470,28 @@
       box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
     }
 
-    /* Always-Visible Fixed Bottom Dock */
+    /* Hide scrollbar for horizontal mobile chip strip while keeping swipe smooth */
+    .no-scrollbar::-webkit-scrollbar { display: none; }
+    .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+
+    /* ==========================================================================
+       6. FIXED FROSTED BOTTOM DOCK
+       ========================================================================== */
     .dock-wrapper {
       position: fixed;
       bottom: 16px;
       left: 50%;
       transform: translateX(-50%);
-      z-index: 9999;
-      max-width: calc(100vw - 16px);
+      z-index: 100;
+      width: calc(100% - 24px);
+      max-width: 480px;
+    }
+
+    @media (min-width: 920px) {
+      .dock-wrapper {
+        width: auto;
+        max-width: calc(100vw - 32px);
+      }
     }
 
     .desk-dock {
@@ -517,17 +500,46 @@
       -webkit-backdrop-filter: blur(18px);
       border: 1px solid var(--dock-border);
       box-shadow: var(--shadow-dock);
-      transition: background-color 0.26s ease, border-color 0.26s ease, box-shadow 0.26s ease;
+      border-radius: 18px;
+      padding: 6px;
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 4px;
+    }
+
+    @media (min-width: 920px) {
+      .desk-dock {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        padding: 6px 8px;
+      }
     }
 
     .dock-btn {
-      position: relative;
-      color: var(--ink);
-      transition: transform 0.18s cubic-bezier(0.22, 1, 0.36, 1), background-color 0.18s ease, color 0.18s ease;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 3px;
+      padding: 7px 6px 5px;
+      border-radius: 12px;
+      color: var(--ink-muted);
+      cursor: pointer;
+      border: none;
+      background: transparent;
+      transition: transform 0.16s ease, background-color 0.16s ease, color 0.16s ease;
+    }
+
+    @media (min-width: 920px) {
+      .dock-btn {
+        padding: 7px 14px 5px;
+      }
     }
 
     .dock-btn:hover {
       background-color: var(--accent-soft);
+      color: var(--ink);
       transform: translateY(-2px);
     }
 
@@ -544,13 +556,9 @@
       transition: background-color 0.2s ease, transform 0.2s ease;
     }
 
-    .dock-btn.is-open .dock-dot {
-      background-color: var(--secondary);
-    }
-
     .dock-btn.is-active .dock-dot {
       background-color: var(--accent);
-      transform: scale(1.25);
+      transform: scale(1.2);
     }
 
     #toast-pill {
@@ -560,56 +568,38 @@
     }
   </style>
 </head>
-<body class="desk-surface">
+<body>
 
   <!-- ========================================================================
-       1. FIXED 40px TOP MENUBAR
+       1. STICKY TOP OS MENUBAR
        ======================================================================== -->
-  <header class="top-menubar fixed top-0 left-0 right-0 z-[9990] h-[40px] px-3 sm:px-5 flex items-center justify-between gap-2 text-xs theme-surface">
-    <!-- Left Brand & Active Window Breadcrumb -->
+  <header class="top-menubar px-3.5 sm:px-6 flex items-center justify-between gap-2 theme-surface">
+    <!-- Left: Domain + Active App -->
     <div class="flex items-center gap-2 min-w-0">
       <span class="w-2.5 h-2.5 rounded-full shrink-0" style="background-color: var(--accent);"></span>
-      <span class="font-mono-ui font-semibold t-ink tracking-tight truncate text-[11.5px] sm:text-xs">anuragmaurya.in</span>
+      <span class="font-mono-ui font-semibold text-xs t-ink tracking-tight truncate">anuragmaurya.in</span>
       <span class="hidden sm:inline-block t-muted opacity-40">/</span>
-      <span id="active-app-label" class="hidden sm:inline-block font-mono-ui text-[11px] t-accent font-medium truncate">README.md</span>
+      <span id="menubar-app-name" class="hidden sm:inline-block font-mono-ui text-[11.5px] t-accent font-medium truncate">README.md</span>
     </div>
 
-    <!-- Right: 3-Way Theme Toggle + Window Controls + Live IST Clock -->
-    <div class="flex items-center gap-1.5 sm:gap-2.5 shrink-0">
+    <!-- Right: 3-Theme Switcher + Live IST Clock (Desktop) -->
+    <div class="flex items-center gap-3 shrink-0">
       <div class="theme-switcher" role="group" aria-label="Color Theme">
-        <button type="button" class="theme-btn is-active" data-set-theme="midnight" aria-pressed="true" title="Midnight Dark theme">
-          <span class="theme-swatch" style="background:#161920;"></span>
+        <button type="button" class="theme-btn is-active" data-set-theme="midnight" aria-pressed="true">
+          <span class="theme-swatch" style="background:#16181D;"></span>
           <span>Midnight</span>
         </button>
-        <button type="button" class="theme-btn" data-set-theme="paper" aria-pressed="false" title="Warm Paper theme">
-          <span class="theme-swatch" style="background:#F4F0E8;"></span>
+        <button type="button" class="theme-btn" data-set-theme="paper" aria-pressed="false">
+          <span class="theme-swatch" style="background:#F3EFE6;"></span>
           <span>Paper</span>
         </button>
-        <button type="button" class="theme-btn" data-set-theme="sage" aria-pressed="false" title="Studio Sage theme">
+        <button type="button" class="theme-btn" data-set-theme="sage" aria-pressed="false">
           <span class="theme-swatch" style="background:#CFE0D3;"></span>
           <span>Sage</span>
         </button>
       </div>
 
-      <button
-        id="cascade-btn"
-        type="button"
-        title="Cascade all windows"
-        class="desktop-only t-btn-subtle font-mono-ui text-[10.5px] px-2.5 py-1 rounded-md transition-colors"
-      >
-        Cascade
-      </button>
-
-      <button
-        id="reset-desk-btn"
-        type="button"
-        title="Restore centered desk layout"
-        class="desktop-only t-btn-subtle font-mono-ui text-[10.5px] px-2.5 py-1 rounded-md transition-colors"
-      >
-        Reset Desk
-      </button>
-
-      <div class="hidden lg:flex items-center gap-1.5 font-mono-ui text-[10.5px] t-muted pl-1">
+      <div class="hidden md:flex items-center gap-1.5 font-mono-ui text-[11px] t-muted">
         <span class="w-1.5 h-1.5 rounded-full" style="background-color: var(--secondary);"></span>
         <span id="ist-clock">--:-- IST</span>
       </div>
@@ -621,701 +611,609 @@
     id="toast-pill"
     role="status"
     aria-live="polite"
-    class="fixed top-12 left-1/2 -translate-x-1/2 z-[10000] px-4 py-1.5 rounded-full font-mono-ui text-[11px] font-medium shadow-xl opacity-0 pointer-events-none -translate-y-2"
+    class="fixed top-14 left-1/2 -translate-x-1/2 z-[110] px-4 py-1.5 rounded-full font-mono-ui text-[11px] font-medium shadow-xl opacity-0 pointer-events-none -translate-y-2"
   >
     Copied myanurag0202@gmail.com
   </div>
 
   <!-- ========================================================================
-       2. INTERACTIVE DESK CANVAS (CENTERED ~1160px STAGE ON DESKTOP)
+       2. MAIN NORMAL-FLOW DESK CONTAINER (CENTERED MAX 1200px)
        ======================================================================== -->
-  <main id="desk-canvas">
+  <main class="desk-container">
+    <div id="desk-grid" class="desk-grid">
 
-    <!-- ----------------------------------------------------------------------
-         LEFT COLUMN TOP: PINNED POLAROID PHOTO CARD (./profile.jpg + AM FALLBACK)
-         ---------------------------------------------------------------------- -->
-    <aside
-      id="desk-polaroid"
-      class="desk-item polaroid-card"
-      style="width: 260px; left: 40px; top: 68px; transform: rotate(-1.5deg); z-index: 12;"
-      aria-label="Anurag Maurya Portrait"
-    >
-      <div class="washi-tape"></div>
-
-      <div class="flex flex-row min-[960px]:flex-col gap-3.5 min-[960px]:gap-0 items-center min-[960px]:items-stretch">
-        <div class="relative w-24 h-28 min-[960px]:w-full min-[960px]:h-[212px] shrink-0 overflow-hidden rounded-[3px] border t-border" style="background-color: var(--win-subtle);">
+      <!-- ====================================================================
+           MOBILE COMPACT PROFILE HEADER (< 920px ONLY)
+           ==================================================================== -->
+      <section class="mobile-profile-card items-center gap-3.5 theme-surface" aria-label="Profile Summary">
+        <div class="relative w-14 h-14 rounded-xl overflow-hidden shrink-0 border t-border" style="background-color: var(--win-subtle);">
           <img
             src="./profile.jpg"
             alt="Anurag Maurya"
-            class="w-full h-full object-cover object-top pointer-events-none"
-            onerror="this.style.display='none'; document.getElementById('polaroid-fallback').classList.remove('hidden');"
+            class="w-full h-full object-cover object-top"
+            onerror="this.style.display='none'; document.getElementById('mobile-avatar-fallback').classList.remove('hidden');"
           />
-
-          <!-- Terracotta AM Monogram Fallback -->
           <div
-            id="polaroid-fallback"
-            class="hidden w-full h-full flex flex-col items-center justify-center text-center p-3"
-            style="background: linear-gradient(155deg, #E06D53 0%, #9E422E 100%); color: #F3F1EC;"
+            id="mobile-avatar-fallback"
+            class="hidden w-full h-full flex items-center justify-center font-serif-editorial text-xl font-medium"
+            style="background: linear-gradient(155deg, #E06D4B 0%, #9E422E 100%); color: #F2EFE9;"
           >
-            <span class="font-serif-editorial text-5xl min-[960px]:text-7xl leading-none">AM</span>
-            <span class="w-8 h-px bg-white/40 my-2"></span>
-            <span class="font-mono-ui text-[9px] uppercase tracking-[0.18em] opacity-85">profile.jpg</span>
+            AM
           </div>
         </div>
-
-        <div class="min-[960px]:pt-3 min-[960px]:px-1 flex-1">
-          <div class="font-serif-editorial italic text-[22px] leading-tight t-ink">Anurag · Gurgaon</div>
-          <div class="font-mono-ui text-[10.5px] t-muted mt-0.5">Software Engineer @ Delhivery</div>
-          <div class="mt-2 pt-2 border-t t-border flex items-center gap-1.5 font-mono-ui text-[10px] t-secondary">
-            <span class="w-1.5 h-1.5 rounded-full shrink-0" style="background-color: var(--secondary);"></span>
-            <span>TransportOne · Backend &amp; AI</span>
-          </div>
-        </div>
-      </div>
-    </aside>
-
-    <!-- ----------------------------------------------------------------------
-         LEFT COLUMN BOTTOM: WARM STICKY NOTE CARD
-         ---------------------------------------------------------------------- -->
-    <aside
-      id="desk-sticky"
-      class="desk-item sticky-note p-4"
-      style="width: 260px; left: 40px; top: 385px; transform: rotate(1deg); z-index: 11;"
-      aria-label="Desk Sticky Note"
-    >
-      <div class="flex items-center justify-between mb-2">
-        <span class="font-mono-ui text-[10px] uppercase tracking-[0.14em]" style="color: var(--sticky-muted);">NOTE // DESK</span>
-        <span class="w-2 h-2 rounded-full" style="background-color: var(--accent);"></span>
-      </div>
-      <p class="text-[13.5px] leading-relaxed" style="color: var(--sticky-ink);">
-        Currently scaling distributed systems &amp; AI agents @ Delhivery. Always up for badminton, travel stories, or good food.
-      </p>
-      <div class="mt-3 pt-2.5 border-t flex items-center justify-between font-mono-ui text-[10.5px]" style="border-color: var(--sticky-border); color: var(--sticky-muted);">
-        <span>Drag windows freely</span>
-        <button
-          type="button"
-          data-open-win="win-systems"
-          class="font-medium hover:underline"
-          style="color: var(--accent);"
-        >
-          Open Systems/ &rarr;
-        </button>
-      </div>
-    </aside>
-
-    <!-- ======================================================================
-         WINDOW 1: README.md (ONLY PRIMARY WINDOW OPEN INITIALLY)
-         ====================================================================== -->
-    <section
-      id="win-readme"
-      class="os-window is-focused mobile-active"
-      data-window="readme"
-      data-title="README.md"
-      style="width: 840px; left: 332px; top: 68px; z-index: 25;"
-      aria-label="README.md Window"
-    >
-      <div class="win-titlebar" data-drag-handle="win-readme">
-        <div class="flex items-center gap-2">
-          <button type="button" data-close-win="win-readme" aria-label="Close README.md" title="Close" class="desktop-only traffic-dot bg-[#E05A47]"></button>
-          <button type="button" data-min-win="win-readme" aria-label="Minimize README.md" title="Minimize" class="desktop-only traffic-dot bg-[#E5B44A]"></button>
-          <button type="button" data-expand-win="win-readme" aria-label="Expand or Restore README.md" title="Expand / Restore" class="desktop-only traffic-dot bg-[#4EB66D]"></button>
-          <span class="font-mono-ui text-xs font-medium t-ink ml-1.5">README.md</span>
-        </div>
-        <span class="font-mono-ui text-[10.5px] t-muted">anuragmaurya.in · overview</span>
-      </div>
-
-      <div class="win-body p-6 sm:p-8 space-y-6">
-        <!-- Editorial Intro -->
-        <div class="space-y-3.5">
-          <div class="inline-flex items-center gap-1.5 font-mono-ui text-[10.5px] uppercase tracking-[0.14em] t-secondary-badge border px-3 py-1 rounded-full">
+        <div class="min-w-0 flex-1">
+          <div class="font-serif-editorial text-xl leading-tight t-ink truncate">Anurag Maurya</div>
+          <div class="font-mono-ui text-[11px] t-muted truncate">Software Engineer @ Delhivery</div>
+          <div class="flex items-center gap-1.5 font-mono-ui text-[10px] t-secondary mt-0.5">
             <span class="w-1.5 h-1.5 rounded-full" style="background-color: var(--secondary);"></span>
-            <span>ANURAG MAURYA · GURGAON, INDIA</span>
+            <span>Gurgaon, India · TransportOne</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- ====================================================================
+           DESKTOP STICKY LEFT SIDEBAR (>= 920px ONLY): POLAROID + STICKY NOTE
+           ==================================================================== -->
+      <aside class="desktop-sidebar" aria-label="Desk Profile and Note">
+        <!-- Pinned Polaroid Photo Card -->
+        <div class="polaroid-card theme-surface">
+          <div class="washi-tape"></div>
+          <div class="relative w-full h-[236px] overflow-hidden rounded-[4px] border t-border" style="background-color: var(--win-subtle);">
+            <img
+              src="./profile.jpg"
+              alt="Anurag Maurya"
+              class="w-full h-full object-cover object-top"
+              onerror="this.style.display='none'; document.getElementById('desktop-avatar-fallback').classList.remove('hidden');"
+            />
+            <div
+              id="desktop-avatar-fallback"
+              class="hidden w-full h-full flex flex-col items-center justify-center text-center p-4"
+              style="background: linear-gradient(155deg, #E06D4B 0%, #9E422E 100%); color: #F2EFE9;"
+            >
+              <span class="font-serif-editorial text-7xl leading-none">AM</span>
+              <span class="w-8 h-px bg-white/40 my-2.5"></span>
+              <span class="font-mono-ui text-[10px] uppercase tracking-[0.18em] opacity-85">profile.jpg</span>
+            </div>
           </div>
 
-          <h1 class="font-serif-editorial text-3xl sm:text-[2.75rem] leading-[1.08] t-ink">
-            Designing distributed backend systems that scale, and <em class="italic t-accent">AI workflows</em> that deliver.
-          </h1>
+          <div class="pt-3.5 px-1">
+            <div class="font-serif-editorial italic text-[22px] leading-tight t-ink">Anurag · Gurgaon</div>
+            <div class="font-mono-ui text-[11px] t-muted mt-0.5">Software Engineer @ Delhivery</div>
+            <div class="mt-2.5 pt-2.5 border-t t-border flex items-center gap-1.5 font-mono-ui text-[10.5px] t-secondary">
+              <span class="w-1.5 h-1.5 rounded-full shrink-0" style="background-color: var(--secondary);"></span>
+              <span>TransportOne · Backend &amp; AI</span>
+            </div>
+          </div>
+        </div>
 
-          <p class="text-[15px] sm:text-base t-body leading-relaxed max-w-[74ch]">
-            Hey, I’m Anurag — a Software Engineer at <strong class="font-semibold t-ink">Delhivery (TransportOne)</strong>. I started out in Mechanical Engineering at <strong class="font-semibold t-ink">NIT Allahabad (7.86 CGPA)</strong> before pivoting full-time into backend architecture. Today, I spend my days scaling Kafka &amp; Redis microservices, eliminating race conditions in financial engines, and shipping autonomous AI systems that solve real logistics challenges.
+        <!-- Warm Tactile Sticky Note -->
+        <div class="sticky-note p-4 theme-surface">
+          <div class="flex items-center justify-between mb-2">
+            <span class="font-mono-ui text-[10px] uppercase tracking-[0.15em]" style="color: var(--sticky-muted);">NOTE // DESK</span>
+            <span class="w-2 h-2 rounded-full" style="background-color: var(--accent);"></span>
+          </div>
+          <p class="text-[13.5px] leading-relaxed" style="color: var(--sticky-ink);">
+            Currently building distributed systems &amp; AI agents @ Delhivery. Always up for badminton, travel, or good food.
           </p>
-        </div>
-
-        <!-- 4-Metric Highlight Strip -->
-        <div class="grid grid-cols-2 sm:grid-cols-4 gap-3">
-          <div class="rounded-xl border t-subtle p-3.5 theme-surface">
-            <div class="font-serif-editorial text-[1.65rem] leading-none t-accent">7–8s &rarr; 400ms</div>
-            <div class="font-mono-ui text-[10.5px] t-muted mt-2 leading-snug">Peak API latency drop</div>
-          </div>
-          <div class="rounded-xl border t-subtle p-3.5 theme-surface">
-            <div class="font-serif-editorial text-[1.65rem] leading-none t-ink">15+</div>
-            <div class="font-mono-ui text-[10.5px] t-muted mt-2 leading-snug">Microservices on Kafka &amp; Redis</div>
-          </div>
-          <div class="rounded-xl border t-subtle p-3.5 theme-surface">
-            <div class="font-serif-editorial text-[1.65rem] leading-none t-secondary">60%+</div>
-            <div class="font-mono-ui text-[10.5px] t-muted mt-2 leading-snug">Voice AI autonomous resolution</div>
-          </div>
-          <div class="rounded-xl border t-subtle p-3.5 theme-surface">
-            <div class="font-serif-editorial text-[1.65rem] leading-none t-ink">40+</div>
-            <div class="font-mono-ui text-[10.5px] t-muted mt-2 leading-snug">Customers on self-hosted BI</div>
+          <div class="mt-3 pt-2.5 border-t flex items-center justify-between font-mono-ui text-[10.5px]" style="border-color: var(--sticky-border); color: var(--sticky-muted);">
+            <span>Gurgaon, India</span>
+            <button type="button" data-switch-app="systems" class="font-medium hover:underline" style="color: var(--accent);">
+              Systems/ &rarr;
+            </button>
           </div>
         </div>
+      </aside>
 
-        <!-- Quick Action Buttons -->
-        <div class="flex flex-wrap items-center gap-3">
-          <button
-            type="button"
-            data-open-win="win-systems"
-            class="t-btn-primary font-mono-ui text-xs font-medium px-4 py-2.5 rounded-xl transition-colors"
-          >
-            Explore Systems/ &rarr;
-          </button>
-          <button
-            type="button"
-            data-open-win="win-career"
-            class="t-btn-subtle font-mono-ui text-xs font-medium px-4 py-2.5 rounded-xl transition-colors"
-          >
-            View Career.log &rarr;
-          </button>
-          <button
-            type="button"
-            data-open-win="win-hobbies"
-            class="t-btn-subtle font-mono-ui text-xs font-medium px-4 py-2.5 rounded-xl transition-colors"
-          >
-            Off the Clock &rarr;
-          </button>
+      <!-- ====================================================================
+           MAIN OS WINDOW CARD (NORMAL DOCUMENT FLOW, FULL AUTO HEIGHT)
+           ==================================================================== -->
+      <section class="os-window theme-surface" aria-label="Active Application Window">
+        <!-- Window Titlebar -->
+        <div class="win-titlebar theme-surface">
+          <div class="flex items-center gap-2">
+            <span class="traffic-dot bg-[#E05A47]" aria-hidden="true"></span>
+            <span class="traffic-dot bg-[#E5B44A]" aria-hidden="true"></span>
+            <button
+              id="focus-mode-btn"
+              type="button"
+              title="Toggle Wide Focus Mode"
+              aria-label="Toggle Wide Focus Mode"
+              class="traffic-dot bg-[#4EB66D]"
+            ></button>
+            <span id="window-title" class="font-mono-ui text-xs font-medium t-ink ml-2">README.md</span>
+          </div>
+          <span id="window-subtitle" class="font-mono-ui text-[10.5px] t-muted">anuragmaurya.in · overview</span>
         </div>
 
-        <!-- Compact Core Stack Tags -->
-        <div class="pt-5 border-t t-border space-y-2.5">
-          <div class="flex items-center justify-between">
-            <h2 class="font-mono-ui text-[11px] uppercase tracking-[0.16em] t-muted">Core Stack</h2>
-            <span class="font-mono-ui text-[10.5px] t-muted">Backend · Distributed Systems · AI</span>
+        <!-- ==================================================================
+             APP 1: README.md (DEFAULT)
+             ================================================================== -->
+        <div id="app-readme" class="app-view is-active p-5 sm:p-8 space-y-7">
+          <!-- Hero Intro -->
+          <div class="space-y-4">
+            <div class="inline-flex items-center gap-1.5 font-mono-ui text-[10.5px] uppercase tracking-[0.14em] t-secondary-badge border px-3 py-1 rounded-full">
+              <span class="w-1.5 h-1.5 rounded-full" style="background-color: var(--secondary);"></span>
+              <span>ANURAG MAURYA · GURGAON, INDIA</span>
+            </div>
+
+            <h1 class="font-serif-editorial text-3xl sm:text-[2.75rem] leading-[1.08] t-ink">
+              Designing distributed backend systems that scale, and <em class="italic t-accent">AI workflows</em> that deliver.
+            </h1>
+
+            <p class="text-[15px] sm:text-base t-body leading-relaxed max-w-[74ch]">
+              Hey, I’m Anurag — a Software Engineer at <strong class="font-semibold t-ink">Delhivery (TransportOne)</strong>. I started out in Mechanical Engineering at <strong class="font-semibold t-ink">NIT Allahabad (7.86 CGPA)</strong> before pivoting full-time into backend architecture. Today, I build high-scale Kafka &amp; Redis microservices, race-condition-free B2B financial engines, and autonomous LLM voice agents.
+            </p>
           </div>
-          <div class="flex flex-wrap gap-1.5">
-            <span class="font-mono-ui text-[11px] px-2.5 py-1 rounded-md border t-subtle t-ink">Python</span>
-            <span class="font-mono-ui text-[11px] px-2.5 py-1 rounded-md border t-subtle t-ink">JavaScript</span>
-            <span class="font-mono-ui text-[11px] px-2.5 py-1 rounded-md border t-subtle t-ink">SQL</span>
-            <span class="font-mono-ui text-[11px] px-2.5 py-1 rounded-md border t-subtle t-ink">C++</span>
-            <span class="font-mono-ui text-[11px] px-2.5 py-1 rounded-md border t-subtle t-ink">Node.js</span>
-            <span class="font-mono-ui text-[11px] px-2.5 py-1 rounded-md border t-subtle t-ink">Express</span>
-            <span class="font-mono-ui text-[11px] px-2.5 py-1 rounded-md border t-subtle t-ink">Django</span>
-            <span class="font-mono-ui text-[11px] px-2.5 py-1 rounded-md border t-subtle t-ink">Flask</span>
-            <span class="font-mono-ui text-[11px] px-2.5 py-1 rounded-md border t-subtle t-ink">Kafka</span>
-            <span class="font-mono-ui text-[11px] px-2.5 py-1 rounded-md border t-subtle t-ink">Redis</span>
-            <span class="font-mono-ui text-[11px] px-2.5 py-1 rounded-md border t-subtle t-ink">PostgreSQL</span>
-            <span class="font-mono-ui text-[11px] px-2.5 py-1 rounded-md border t-subtle t-ink">MongoDB</span>
-            <span class="font-mono-ui text-[11px] px-2.5 py-1 rounded-md border t-subtle t-ink">DynamoDB</span>
-            <span class="font-mono-ui text-[11px] px-2.5 py-1 rounded-md border t-subtle t-ink">AWS Lambda</span>
-            <span class="font-mono-ui text-[11px] px-2.5 py-1 rounded-md border t-subtle t-ink">OpenSearch</span>
-            <span class="font-mono-ui text-[11px] px-2.5 py-1 rounded-md border t-subtle t-ink">MCP</span>
-            <span class="font-mono-ui text-[11px] px-2.5 py-1 rounded-md border t-subtle t-ink">Apache Superset</span>
+
+          <!-- 4 Key Impact Stat Cards -->
+          <div class="grid grid-cols-2 lg:grid-cols-4 gap-3">
+            <div class="rounded-xl border t-subtle p-4 theme-surface">
+              <div class="font-serif-editorial text-2xl sm:text-[1.7rem] leading-none t-accent">7–8s &rarr; 400ms</div>
+              <div class="font-mono-ui text-[10.5px] t-muted mt-2 leading-snug">Peak API latency drop</div>
+            </div>
+            <div class="rounded-xl border t-subtle p-4 theme-surface">
+              <div class="font-serif-editorial text-2xl sm:text-[1.7rem] leading-none t-secondary">60%+</div>
+              <div class="font-mono-ui text-[10.5px] t-muted mt-2 leading-snug">Autonomous Voice AI resolution</div>
+            </div>
+            <div class="rounded-xl border t-subtle p-4 theme-surface">
+              <div class="font-serif-editorial text-2xl sm:text-[1.7rem] leading-none t-ink">40+ Orgs</div>
+              <div class="font-mono-ui text-[10.5px] t-muted mt-2 leading-snug">Self-hosted Superset BI</div>
+            </div>
+            <div class="rounded-xl border t-subtle p-4 theme-surface">
+              <div class="font-serif-editorial text-2xl sm:text-[1.7rem] leading-none t-ink">15+ Services</div>
+              <div class="font-mono-ui text-[10.5px] t-muted mt-2 leading-snug">Kafka &amp; Redis ecosystem</div>
+            </div>
+          </div>
+
+          <!-- Quick Jump Buttons -->
+          <div class="flex flex-wrap items-center gap-3">
+            <button
+              type="button"
+              data-switch-app="systems"
+              class="t-btn-primary font-mono-ui text-xs font-medium px-4 py-2.5 rounded-xl transition-colors"
+            >
+              Explore Systems/ &rarr;
+            </button>
+            <button
+              type="button"
+              data-switch-app="contact"
+              class="t-btn-subtle font-mono-ui text-xs font-medium px-4 py-2.5 rounded-xl transition-colors"
+            >
+              Open Contact.vcf &rarr;
+            </button>
+          </div>
+
+          <!-- Interactive Filterable Technical Stack -->
+          <div class="pt-6 border-t t-border space-y-4">
+            <div class="flex flex-wrap items-center justify-between gap-3">
+              <h2 class="font-mono-ui text-xs uppercase tracking-[0.16em] t-muted">Technical Stack</h2>
+              <div class="flex flex-wrap gap-1.5" role="group" aria-label="Filter Technical Stack">
+                <button type="button" class="filter-pill is-active" data-stack-filter="all">All</button>
+                <button type="button" class="filter-pill" data-stack-filter="languages">Languages &amp; Core</button>
+                <button type="button" class="filter-pill" data-stack-filter="backend">Backend &amp; DBs</button>
+                <button type="button" class="filter-pill" data-stack-filter="cloud">Cloud &amp; AI</button>
+              </div>
+            </div>
+
+            <div id="stack-chips" class="flex flex-wrap gap-2">
+              <!-- Languages & Core -->
+              <span data-cat="languages" class="stack-chip font-mono-ui text-xs px-3 py-1.5 rounded-lg border t-subtle t-ink">Python</span>
+              <span data-cat="languages" class="stack-chip font-mono-ui text-xs px-3 py-1.5 rounded-lg border t-subtle t-ink">JavaScript</span>
+              <span data-cat="languages" class="stack-chip font-mono-ui text-xs px-3 py-1.5 rounded-lg border t-subtle t-ink">SQL</span>
+              <span data-cat="languages" class="stack-chip font-mono-ui text-xs px-3 py-1.5 rounded-lg border t-subtle t-ink">C++</span>
+              <span data-cat="languages" class="stack-chip font-mono-ui text-xs px-3 py-1.5 rounded-lg border t-subtle t-ink">DSA</span>
+              <span data-cat="languages" class="stack-chip font-mono-ui text-xs px-3 py-1.5 rounded-lg border t-subtle t-ink">System Design (HLD/LLD)</span>
+
+              <!-- Backend & DBs -->
+              <span data-cat="backend" class="stack-chip font-mono-ui text-xs px-3 py-1.5 rounded-lg border t-subtle t-ink">Node.js</span>
+              <span data-cat="backend" class="stack-chip font-mono-ui text-xs px-3 py-1.5 rounded-lg border t-subtle t-ink">Express.js</span>
+              <span data-cat="backend" class="stack-chip font-mono-ui text-xs px-3 py-1.5 rounded-lg border t-subtle t-ink">Django</span>
+              <span data-cat="backend" class="stack-chip font-mono-ui text-xs px-3 py-1.5 rounded-lg border t-subtle t-ink">Flask</span>
+              <span data-cat="backend" class="stack-chip font-mono-ui text-xs px-3 py-1.5 rounded-lg border t-subtle t-ink">Apache Kafka</span>
+              <span data-cat="backend" class="stack-chip font-mono-ui text-xs px-3 py-1.5 rounded-lg border t-subtle t-ink">Redis</span>
+              <span data-cat="backend" class="stack-chip font-mono-ui text-xs px-3 py-1.5 rounded-lg border t-subtle t-ink">PostgreSQL</span>
+              <span data-cat="backend" class="stack-chip font-mono-ui text-xs px-3 py-1.5 rounded-lg border t-subtle t-ink">MongoDB</span>
+              <span data-cat="backend" class="stack-chip font-mono-ui text-xs px-3 py-1.5 rounded-lg border t-subtle t-ink">AWS DynamoDB</span>
+
+              <!-- Cloud & AI -->
+              <span data-cat="cloud" class="stack-chip font-mono-ui text-xs px-3 py-1.5 rounded-lg border t-subtle t-ink">AWS Lambda</span>
+              <span data-cat="cloud" class="stack-chip font-mono-ui text-xs px-3 py-1.5 rounded-lg border t-subtle t-ink">OpenSearch</span>
+              <span data-cat="cloud" class="stack-chip font-mono-ui text-xs px-3 py-1.5 rounded-lg border t-subtle t-ink">Model Context Protocol (MCP)</span>
+              <span data-cat="cloud" class="stack-chip font-mono-ui text-xs px-3 py-1.5 rounded-lg border t-subtle t-ink">Apache Superset</span>
+              <span data-cat="cloud" class="stack-chip font-mono-ui text-xs px-3 py-1.5 rounded-lg border t-subtle t-ink">Gemini LLM</span>
+              <span data-cat="cloud" class="stack-chip font-mono-ui text-xs px-3 py-1.5 rounded-lg border t-subtle t-ink">Git</span>
+              <span data-cat="cloud" class="stack-chip font-mono-ui text-xs px-3 py-1.5 rounded-lg border t-subtle t-ink">Linux</span>
+            </div>
           </div>
         </div>
-      </div>
-    </section>
 
-    <!-- ======================================================================
-         WINDOW 2: Systems/ (STARTS CLOSED, GENEROUS 920px TWO-PANE EXPLORER)
-         ====================================================================== -->
-    <section
-      id="win-systems"
-      class="os-window is-closed"
-      data-window="systems"
-      data-title="Systems/"
-      style="width: 920px; left: 200px; top: 68px; z-index: 20;"
-      aria-label="Systems Explorer Window"
-    >
-      <div class="win-titlebar" data-drag-handle="win-systems">
-        <div class="flex items-center gap-2">
-          <button type="button" data-close-win="win-systems" aria-label="Close Systems" title="Close" class="desktop-only traffic-dot bg-[#E05A47]"></button>
-          <button type="button" data-min-win="win-systems" aria-label="Minimize Systems" title="Minimize" class="desktop-only traffic-dot bg-[#E5B44A]"></button>
-          <button type="button" data-expand-win="win-systems" aria-label="Expand or Restore Systems" title="Expand / Restore" class="desktop-only traffic-dot bg-[#4EB66D]"></button>
-          <span class="font-mono-ui text-xs font-medium t-ink ml-1.5">Systems/</span>
+        <!-- ==================================================================
+             APP 2: Systems/ (6 EXPANDED DELHIVERY CASE STUDIES)
+             ================================================================== -->
+        <div id="app-systems" class="app-view">
+          <div class="grid grid-cols-1 lg:grid-cols-12">
+            <!-- File List: Horizontal Swipeable Chips on Mobile, Left Sidebar on Desktop -->
+            <aside class="lg:col-span-4 border-b lg:border-b-0 lg:border-r t-border p-3.5 lg:p-4" style="background-color: var(--win-subtle);">
+              <div class="font-mono-ui text-[10px] uppercase tracking-[0.16em] t-muted px-1 pb-2.5">
+                Delhivery · TransportOne (6)
+              </div>
+              <div class="flex lg:flex-col gap-2 overflow-x-auto lg:overflow-visible no-scrollbar pb-1 lg:pb-0">
+                <button type="button" data-sys="dynamodb" class="sys-file-btn active text-left px-3 py-2.5 rounded-xl shrink-0 lg:shrink min-w-[215px] lg:min-w-0">
+                  <div class="font-mono-ui text-[11.5px] font-medium truncate">01_dynamodb_opensearch_cdc.sys</div>
+                  <div class="text-[11px] t-muted mt-0.5 truncate">7–8s &rarr; 400–500ms · 12 Tables</div>
+                </button>
+                <button type="button" data-sys="billing" class="sys-file-btn text-left px-3 py-2.5 rounded-xl shrink-0 lg:shrink min-w-[215px] lg:min-w-0">
+                  <div class="font-mono-ui text-[11.5px] font-medium truncate">02_billing_state_machine.sys</div>
+                  <div class="text-[11px] t-muted mt-0.5 truncate">Redis Charge Locking · 70% Faster</div>
+                </button>
+                <button type="button" data-sys="priya" class="sys-file-btn text-left px-3 py-2.5 rounded-xl shrink-0 lg:shrink min-w-[215px] lg:min-w-0">
+                  <div class="font-mono-ui text-[11.5px] font-medium truncate">03_voice_agent_priya.sys</div>
+                  <div class="text-[11px] t-muted mt-0.5 truncate">MCP Server · 60%+ Auto-Resolved</div>
+                </button>
+                <button type="button" data-sys="superset" class="sys-file-btn text-left px-3 py-2.5 rounded-xl shrink-0 lg:shrink min-w-[215px] lg:min-w-0">
+                  <div class="font-mono-ui text-[11.5px] font-medium truncate">04_superset_analytics_migration.sys</div>
+                  <div class="text-[11px] t-muted mt-0.5 truncate">40+ Customers · $0 Licensing</div>
+                </button>
+                <button type="button" data-sys="invoice" class="sys-file-btn text-left px-3 py-2.5 rounded-xl shrink-0 lg:shrink min-w-[215px] lg:min-w-0">
+                  <div class="font-mono-ui text-[11.5px] font-medium truncate">05_ai_invoice_validator.sys</div>
+                  <div class="text-[11px] t-muted mt-0.5 truncate">Gemini LLM + Python · HITL</div>
+                </button>
+                <button type="button" data-sys="ecosystem" class="sys-file-btn text-left px-3 py-2.5 rounded-xl shrink-0 lg:shrink min-w-[215px] lg:min-w-0">
+                  <div class="font-mono-ui text-[11.5px] font-medium truncate">06_kafka_redis_ecosystem.sys</div>
+                  <div class="text-[11px] t-muted mt-0.5 truncate">15+ Services · Lakhs/Day</div>
+                </button>
+              </div>
+            </aside>
+
+            <!-- Active Case Study Detail Panel -->
+            <div class="lg:col-span-8 p-5 sm:p-7 space-y-5">
+              <div class="space-y-2.5 pb-4 border-b t-border">
+                <div id="sys-filename" class="font-mono-ui text-[11px] t-accent"></div>
+                <h2 id="sys-title" class="font-serif-editorial text-2xl sm:text-[2rem] leading-tight t-ink"></h2>
+                <div id="sys-badges" class="flex flex-wrap gap-2 pt-1"></div>
+              </div>
+
+              <div>
+                <h3 class="font-mono-ui text-[10.5px] uppercase tracking-[0.15em] t-muted mb-1.5">Overview</h3>
+                <p id="sys-overview" class="text-[15px] t-body leading-relaxed"></p>
+              </div>
+
+              <div id="sys-detail-wrap">
+                <h3 id="sys-detail-label" class="font-mono-ui text-[10.5px] uppercase tracking-[0.15em] t-muted mb-1.5"></h3>
+                <p id="sys-detail-body" class="text-[15px] t-body leading-relaxed"></p>
+              </div>
+
+              <div class="rounded-xl border t-subtle p-4 theme-surface">
+                <div class="font-mono-ui text-[10px] uppercase tracking-[0.16em] t-muted mb-3">Architecture Flow</div>
+                <div id="sys-pipeline" class="flex flex-wrap items-center gap-2"></div>
+              </div>
+
+              <div id="sys-tags" class="flex flex-wrap gap-1.5 pt-1"></div>
+            </div>
+          </div>
         </div>
-        <span class="font-mono-ui text-[10.5px] t-muted">6 Delhivery production case studies</span>
-      </div>
 
-      <div class="win-body flex-1 grid grid-cols-1 md:grid-cols-12 min-h-0">
-        <!-- Left File Explorer Sidebar -->
-        <aside class="md:col-span-4 border-b md:border-b-0 md:border-r t-border p-3 flex md:flex-col gap-1.5 overflow-x-auto md:overflow-y-auto shrink-0" style="background-color: var(--win-subtle);">
-          <div class="hidden md:block font-mono-ui text-[10px] uppercase tracking-[0.16em] t-muted px-2.5 py-1">
-            Delhivery · TransportOne
+        <!-- ==================================================================
+             APP 3: Career.log (FULL CHRONOLOGICAL TIMELINE)
+             ================================================================== -->
+        <div id="app-career" class="app-view p-5 sm:p-8 space-y-5">
+          <div class="flex items-baseline justify-between pb-3 border-b t-border">
+            <h2 class="font-serif-editorial text-3xl t-ink">Work History &amp; Education</h2>
+            <span class="font-mono-ui text-[10.5px] t-muted">2017 — Present</span>
           </div>
 
-          <button type="button" data-sys="dynamodb" class="sys-file-btn active text-left px-3 py-2.5 rounded-lg shrink-0 md:shrink">
-            <div class="font-mono-ui text-[11.5px] font-medium truncate">01_dynamodb_opensearch_cdc.sys</div>
-            <div class="text-[11px] t-muted mt-0.5 truncate">7–8s &rarr; 400–500ms · 12 Tables</div>
-          </button>
+          <!-- Delhivery -->
+          <article class="rounded-xl border t-card p-5 space-y-3 theme-surface">
+            <div class="flex flex-wrap items-baseline justify-between gap-2">
+              <div>
+                <h3 class="font-semibold text-base t-ink">Delhivery (TransportOne)</h3>
+                <p class="font-mono-ui text-[11px] t-accent">Software Engineer · Gurgaon, India</p>
+              </div>
+              <span class="font-mono-ui text-[10.5px] px-2.5 py-0.5 rounded-full border t-secondary-badge">Apr 2025 – Present</span>
+            </div>
+            <ul class="text-[14.5px] t-body space-y-2 list-disc pl-4 leading-relaxed">
+              <li><strong class="t-ink">DynamoDB + OpenSearch Real-Time CDC Migration:</strong> Co-designed (3-engineer team) a DynamoDB-backed architecture with an AWS Lambda CDC pipeline syncing writes to OpenSearch in real time, replacing a costly external backend SaaS service. Migrated <strong class="t-ink">12 tables</strong> and rewrote a core service with concurrency control, caching, and race-condition prevention—dropping peak API latency from <strong class="t-ink">7–8s to 400–500ms</strong> and average latency from <strong class="t-ink">1.1s to 250ms</strong>.</li>
+              <li><strong class="t-ink">Distributed B2B Financial &amp; Billing Engine:</strong> Architected end-to-end Invoices, Debit Notes, and Credit Notes using a distributed state machine and Redis distributed charge locking so shippers cannot concurrently modify charges mid-invoice creation; cut planning-to-production time by <strong class="t-ink">70%</strong> using Cursor/Kiro.</li>
+              <li><strong class="t-ink">Autonomous Voice Agent (“Priya”) &amp; Multi-Agent Fallback:</strong> Engineered a 24/7 voice agent backed by an internal MCP server with secure token-based auth exposing microservice APIs as LLM tools, plus a ReachAll outbound fallback loop delivering WhatsApp updates. Handles <strong class="t-ink">~20 calls/day per transporter</strong> with <strong class="t-ink">60%+ auto-resolved</strong>.</li>
+              <li><strong class="t-ink">QuickSight &amp; Redash &rarr; Self-Hosted Apache Superset:</strong> Migrated customer analytics for <strong class="t-ink">40+ multi-user customers</strong> from paid AWS QuickSight (<strong class="t-ink">$3/user</strong>) to self-hosted Superset—eliminating licensing costs, removing manual user provisioning, and consolidating Redash scheduled reports onto one platform.</li>
+              <li><strong class="t-ink">Hybrid AI Invoice Validation Engine:</strong> Built a Gemini LLM + deterministic Python validation pipeline to parse unstructured transporter PDFs, cross-check freight charges against active contracts, flag SLA deviations, and route low-confidence cases to a HITL review queue.</li>
+              <li><strong class="t-ink">High-Scale Microservices Ecosystem:</strong> Scale and maintain a <strong class="t-ink">15+ microservice</strong> ecosystem powered by Kafka and Redis, processing <strong class="t-ink">lakhs of transactions daily</strong>.</li>
+            </ul>
+          </article>
 
-          <button type="button" data-sys="billing" class="sys-file-btn text-left px-3 py-2.5 rounded-lg shrink-0 md:shrink">
-            <div class="font-mono-ui text-[11.5px] font-medium truncate">02_billing_state_machine.sys</div>
-            <div class="text-[11px] t-muted mt-0.5 truncate">Redis Locks · 70% Faster</div>
-          </button>
+          <!-- Attentive AI -->
+          <article class="rounded-xl border t-card p-5 space-y-2 theme-surface">
+            <div class="flex flex-wrap items-baseline justify-between gap-2">
+              <div>
+                <h3 class="font-semibold text-[15.5px] t-ink">Attentive AI</h3>
+                <p class="font-mono-ui text-[11px] t-muted">Software Engineer · Noida, India</p>
+              </div>
+              <span class="font-mono-ui text-[10.5px] t-muted">Sep 2024 – Oct 2024</span>
+            </div>
+            <ul class="text-[14.5px] t-body space-y-1.5 list-disc pl-4 leading-relaxed">
+              <li>Implemented GCP Pub/Sub topics and subscribers enabling real-time cross-microservice database updates via Django ORM.</li>
+            </ul>
+          </article>
 
-          <button type="button" data-sys="priya" class="sys-file-btn text-left px-3 py-2.5 rounded-lg shrink-0 md:shrink">
-            <div class="font-mono-ui text-[11.5px] font-medium truncate">03_voice_agent_priya.sys</div>
-            <div class="text-[11px] t-muted mt-0.5 truncate">MCP Server · 60%+ Auto-Resolved</div>
-          </button>
+          <!-- Fincent -->
+          <article class="rounded-xl border t-card p-5 space-y-2 theme-surface">
+            <div class="flex flex-wrap items-baseline justify-between gap-2">
+              <div>
+                <h3 class="font-semibold text-[15.5px] t-ink">Fincent Software Services</h3>
+                <p class="font-mono-ui text-[11px] t-muted">Software Engineer · Bangalore, India</p>
+              </div>
+              <span class="font-mono-ui text-[10.5px] t-muted">Sep 2023 – Aug 2024</span>
+            </div>
+            <ul class="text-[14.5px] t-body space-y-1.5 list-disc pl-4 leading-relaxed">
+              <li>Established an API automation testing framework (JS, Supertest, Mocha, Chai), cutting testing time from <strong class="t-ink">1 day to 10 minutes</strong>.</li>
+              <li>Automated a BullMQ/Node.js scheduled job across <strong class="t-ink">1,000+ Stripe accounts</strong> to reliably recover missed webhooks.</li>
+              <li>Set up automated AWS CI/CD pipelines across environments.</li>
+            </ul>
+          </article>
 
-          <button type="button" data-sys="superset" class="sys-file-btn text-left px-3 py-2.5 rounded-lg shrink-0 md:shrink">
-            <div class="font-mono-ui text-[11.5px] font-medium truncate">04_superset_analytics_migration.sys</div>
-            <div class="text-[11px] t-muted mt-0.5 truncate">40+ Customers · $0 Licensing</div>
-          </button>
+          <!-- Sandvine -->
+          <article class="rounded-xl border t-card p-5 space-y-2 theme-surface">
+            <div class="flex flex-wrap items-baseline justify-between gap-2">
+              <div>
+                <h3 class="font-semibold text-[15.5px] t-ink">Sandvine Technologies</h3>
+                <p class="font-mono-ui text-[11px] t-muted">Software Engineer · Bangalore, India</p>
+              </div>
+              <span class="font-mono-ui text-[10.5px] t-muted">Nov 2021 – Jun 2023</span>
+            </div>
+            <ul class="text-[14.5px] t-body space-y-1.5 list-disc pl-4 leading-relaxed">
+              <li>Built a Python/Pandas multiprocessing test framework, cutting regression runs from <strong class="t-ink">days to 2 hours</strong>.</li>
+              <li>Delivered Python/Django backend features improving application performance by <strong class="t-ink">30%</strong> and cutting development time by <strong class="t-ink">2 weeks</strong>.</li>
+            </ul>
+          </article>
 
-          <button type="button" data-sys="invoice" class="sys-file-btn text-left px-3 py-2.5 rounded-lg shrink-0 md:shrink">
-            <div class="font-mono-ui text-[11.5px] font-medium truncate">05_ai_invoice_validator.sys</div>
-            <div class="text-[11px] t-muted mt-0.5 truncate">Gemini LLM + Python HITL</div>
-          </button>
+          <!-- NIT Allahabad -->
+          <article class="rounded-xl border t-subtle p-5 space-y-1.5 theme-surface">
+            <div class="flex flex-wrap items-baseline justify-between gap-2">
+              <div>
+                <h3 class="font-semibold text-[15.5px] t-ink">NIT Allahabad</h3>
+                <p class="font-mono-ui text-[11px] t-secondary">B.Tech in Mechanical Engineering · 7.86 CGPA</p>
+              </div>
+              <span class="font-mono-ui text-[10.5px] t-muted">Jul 2017 – May 2021</span>
+            </div>
+            <p class="text-[14px] t-muted">
+              Built strong analytical and engineering fundamentals before pivoting full-time into backend systems and software architecture.
+            </p>
+          </article>
+        </div>
 
-          <button type="button" data-sys="ecosystem" class="sys-file-btn text-left px-3 py-2.5 rounded-lg shrink-0 md:shrink">
-            <div class="font-mono-ui text-[11.5px] font-medium truncate">06_kafka_redis_ecosystem.sys</div>
-            <div class="text-[11px] t-muted mt-0.5 truncate">15+ Services · Lakhs/Day</div>
-          </button>
-        </aside>
-
-        <!-- Right Case Study Detail View -->
-        <div class="md:col-span-8 p-6 sm:p-7 overflow-y-auto space-y-5">
-          <div class="space-y-2 pb-4 border-b t-border">
-            <div id="sys-filename" class="font-mono-ui text-[11px] t-accent"></div>
-            <h2 id="sys-title" class="font-serif-editorial text-2xl sm:text-[2rem] leading-tight t-ink"></h2>
-            <div id="sys-badges" class="flex flex-wrap gap-2 pt-1"></div>
-          </div>
-
+        <!-- ==================================================================
+             APP 4: Off_the_Clock.notes (PERSONAL HOBBIES)
+             ================================================================== -->
+        <div id="app-hobbies" class="app-view p-5 sm:p-8 space-y-5">
           <div>
-            <h3 class="font-mono-ui text-[10.5px] uppercase tracking-[0.15em] t-muted mb-1.5">Overview</h3>
-            <p id="sys-overview" class="text-[15px] t-body leading-relaxed"></p>
+            <p class="font-mono-ui text-[10.5px] uppercase tracking-[0.16em] t-accent mb-1">Beyond Code</p>
+            <h2 class="font-serif-editorial text-3xl sm:text-4xl t-ink">How I recharge &amp; explore.</h2>
           </div>
 
-          <div class="rounded-xl border t-subtle p-4 theme-surface">
-            <div class="font-mono-ui text-[10px] uppercase tracking-[0.16em] t-muted mb-3">Architecture Flow</div>
-            <div id="sys-pipeline" class="flex flex-wrap items-center gap-2"></div>
-          </div>
-
-          <div id="sys-deepdive-wrap">
-            <h3 class="font-mono-ui text-[10.5px] uppercase tracking-[0.15em] t-muted mb-1.5">Engineering Deep Dive</h3>
-            <p id="sys-deepdive" class="text-[15px] t-body leading-relaxed"></p>
-          </div>
-
-          <div id="sys-impact-wrap" class="rounded-xl border p-4 t-secondary-badge theme-surface">
-            <h3 class="font-mono-ui text-[10.5px] uppercase tracking-[0.15em] t-secondary mb-1">Impact</h3>
-            <p id="sys-impact" class="text-[14.5px] t-ink leading-relaxed"></p>
-          </div>
-
-          <div id="sys-tags" class="flex flex-wrap gap-1.5 pt-1"></div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ======================================================================
-         WINDOW 3: Career.log (STARTS CLOSED)
-         ====================================================================== -->
-    <section
-      id="win-career"
-      class="os-window is-closed"
-      data-window="career"
-      data-title="Career.log"
-      style="width: 780px; left: 260px; top: 76px; z-index: 19;"
-      aria-label="Career.log Window"
-    >
-      <div class="win-titlebar" data-drag-handle="win-career">
-        <div class="flex items-center gap-2">
-          <button type="button" data-close-win="win-career" aria-label="Close Career.log" title="Close" class="desktop-only traffic-dot bg-[#E05A47]"></button>
-          <button type="button" data-min-win="win-career" aria-label="Minimize Career.log" title="Minimize" class="desktop-only traffic-dot bg-[#E5B44A]"></button>
-          <button type="button" data-expand-win="win-career" aria-label="Expand or Restore Career.log" title="Expand / Restore" class="desktop-only traffic-dot bg-[#4EB66D]"></button>
-          <span class="font-mono-ui text-xs font-medium t-ink ml-1.5">Career.log</span>
-        </div>
-        <span class="font-mono-ui text-[10.5px] t-muted">2017 — present</span>
-      </div>
-
-      <div class="win-body p-6 sm:p-7 space-y-4">
-        <div class="flex items-baseline justify-between pb-3 border-b t-border">
-          <h2 class="font-serif-editorial text-3xl t-ink">Work History &amp; Education</h2>
-          <span class="font-mono-ui text-[10.5px] t-muted">5 entries</span>
-        </div>
-
-        <!-- Delhivery -->
-        <article class="rounded-xl border t-card p-5 space-y-3 theme-surface">
-          <div class="flex flex-wrap items-baseline justify-between gap-2">
-            <div>
-              <h3 class="font-semibold text-base t-ink">Delhivery (TransportOne)</h3>
-              <p class="font-mono-ui text-[11px] t-accent">Software Engineer · Gurgaon, India</p>
-            </div>
-            <span class="font-mono-ui text-[10.5px] px-2.5 py-0.5 rounded-full border t-secondary-badge">Apr 2025 – Present</span>
-          </div>
-          <ul class="text-[14.5px] t-body space-y-2 list-disc pl-4 leading-relaxed">
-            <li><strong class="t-ink">DynamoDB + OpenSearch Real-Time CDC Migration:</strong> Co-designed (3-engineer team) a DynamoDB-backed architecture replacing a costly, high-latency external SaaS backend service. Migrated <strong class="t-ink">12 tables</strong>, rewrote a complete microservice with concurrency control, caching, and race-condition handling, and built a real-time Lambda CDC pipeline to OpenSearch—dropping peak API latency from <strong class="t-ink">7–8s to 400–500ms</strong> and average latency from <strong class="t-ink">1.1s to 250ms</strong>.</li>
-            <li><strong class="t-ink">Distributed B2B Financial &amp; Billing Engine:</strong> Architected the end-to-end workflow for Invoices, Debit Notes, and Credit Notes using a distributed state machine and Redis distributed locking—locking charge records when transporters initiate invoice creation so shippers cannot concurrently modify charges. Cut planning-to-production delivery time by <strong class="t-ink">70%</strong> using Cursor/Kiro.</li>
-            <li><strong class="t-ink">Autonomous Voice Agent “Priya” &amp; Multi-Agent Fallback:</strong> Engineered a 24/7 voice agent backed by an internal MCP server with token-based auth exposing microservice APIs as LLM tools, plus a ReachAll outbound fallback loop that calls transporters for missing context and aggregates updates over WhatsApp. Handles <strong class="t-ink">~20 calls/day per transporter</strong> with <strong class="t-ink">60%+ resolved autonomously</strong>.</li>
-            <li><strong class="t-ink">Self-Hosted Apache Superset &amp; Analytics Consolidation:</strong> Migrated customer analytics end-to-end from paid AWS QuickSight (<strong class="t-ink">$3/user</strong>) to self-hosted Apache Superset across <strong class="t-ink">40+ multi-user customers</strong>, removing manual per-user provisioning and consolidating scheduled reports previously run on Redash.</li>
-            <li><strong class="t-ink">Hybrid AI Invoice Validation Engine:</strong> Built a Gemini LLM + deterministic Python validation pipeline to parse unstructured transporter PDFs, cross-check freight charges against active contracts, flag SLA deviations, and route low-confidence cases to a human-in-the-loop review queue.</li>
-            <li><strong class="t-ink">High-Scale Microservices Ecosystem:</strong> Scale and maintain a <strong class="t-ink">15+ service</strong> distributed logistics ecosystem powered by Kafka (event-driven communication) and Redis (caching/locking), processing <strong class="t-ink">lakhs of transactions daily</strong>.</li>
-          </ul>
-        </article>
-
-        <!-- Attentive AI -->
-        <article class="rounded-xl border t-card p-4 sm:p-5 space-y-2 theme-surface">
-          <div class="flex flex-wrap items-baseline justify-between gap-2">
-            <div>
-              <h3 class="font-semibold text-[15.5px] t-ink">Attentive AI</h3>
-              <p class="font-mono-ui text-[11px] t-muted">Software Engineer · Noida, India</p>
-            </div>
-            <span class="font-mono-ui text-[10.5px] t-muted">Sep 2024 – Oct 2024</span>
-          </div>
-          <ul class="text-[14.5px] t-body space-y-1.5 list-disc pl-4 leading-relaxed">
-            <li>Implemented GCP Pub/Sub topics and subscribers enabling real-time database updates via Django ORM across microservices.</li>
-          </ul>
-        </article>
-
-        <!-- Fincent -->
-        <article class="rounded-xl border t-card p-4 sm:p-5 space-y-2 theme-surface">
-          <div class="flex flex-wrap items-baseline justify-between gap-2">
-            <div>
-              <h3 class="font-semibold text-[15.5px] t-ink">Fincent Software Services</h3>
-              <p class="font-mono-ui text-[11px] t-muted">Software Engineer · Bangalore, India</p>
-            </div>
-            <span class="font-mono-ui text-[10.5px] t-muted">Sep 2023 – Aug 2024</span>
-          </div>
-          <ul class="text-[14.5px] t-body space-y-1.5 list-disc pl-4 leading-relaxed">
-            <li>Established an API automation testing framework (Supertest, Mocha, Chai), cutting testing time from <strong class="t-ink">1 day to 10 minutes</strong>.</li>
-            <li>Automated a BullMQ/Node.js scheduled job across <strong class="t-ink">1,000+ Stripe accounts</strong> to reliably handle missed webhooks.</li>
-            <li>Set up automated AWS CI/CD pipelines across environments.</li>
-          </ul>
-        </article>
-
-        <!-- Sandvine -->
-        <article class="rounded-xl border t-card p-4 sm:p-5 space-y-2 theme-surface">
-          <div class="flex flex-wrap items-baseline justify-between gap-2">
-            <div>
-              <h3 class="font-semibold text-[15.5px] t-ink">Sandvine Technologies</h3>
-              <p class="font-mono-ui text-[11px] t-muted">Software Engineer · Bangalore, India</p>
-            </div>
-            <span class="font-mono-ui text-[10.5px] t-muted">Nov 2021 – Jun 2023</span>
-          </div>
-          <ul class="text-[14.5px] t-body space-y-1.5 list-disc pl-4 leading-relaxed">
-            <li>Built a Python/Pandas multiprocessing test framework, cutting regression runs from <strong class="t-ink">days to 2 hours</strong>.</li>
-            <li>Delivered Python/Django backend features improving application performance by <strong class="t-ink">30%</strong> and cutting development time by <strong class="t-ink">2 weeks</strong>.</li>
-          </ul>
-        </article>
-
-        <!-- NIT Allahabad -->
-        <article class="rounded-xl border t-subtle p-4 sm:p-5 space-y-1.5 theme-surface">
-          <div class="flex flex-wrap items-baseline justify-between gap-2">
-            <div>
-              <h3 class="font-semibold text-[15.5px] t-ink">NIT Allahabad</h3>
-              <p class="font-mono-ui text-[11px] t-secondary">B.Tech, Mechanical Engineering · 7.86 CGPA</p>
-            </div>
-            <span class="font-mono-ui text-[10.5px] t-muted">Jul 2017 – May 2021</span>
-          </div>
-          <p class="text-[14px] t-muted">
-            Built strong analytical and engineering fundamentals before pivoting full-time into backend systems and software architecture.
-          </p>
-        </article>
-      </div>
-    </section>
-
-    <!-- ======================================================================
-         WINDOW 4: Off_the_Clock.notes (STARTS CLOSED)
-         ====================================================================== -->
-    <section
-      id="win-hobbies"
-      class="os-window is-closed"
-      data-window="hobbies"
-      data-title="Off_the_Clock.notes"
-      style="width: 680px; left: 320px; top: 82px; z-index: 18;"
-      aria-label="Off_the_Clock.notes Window"
-    >
-      <div class="win-titlebar" data-drag-handle="win-hobbies">
-        <div class="flex items-center gap-2">
-          <button type="button" data-close-win="win-hobbies" aria-label="Close Off_the_Clock.notes" title="Close" class="desktop-only traffic-dot bg-[#E05A47]"></button>
-          <button type="button" data-min-win="win-hobbies" aria-label="Minimize Off_the_Clock.notes" title="Minimize" class="desktop-only traffic-dot bg-[#E5B44A]"></button>
-          <button type="button" data-expand-win="win-hobbies" aria-label="Expand or Restore Off_the_Clock.notes" title="Expand / Restore" class="desktop-only traffic-dot bg-[#4EB66D]"></button>
-          <span class="font-mono-ui text-xs font-medium t-ink ml-1.5">Off_the_Clock.notes</span>
-        </div>
-        <span class="font-mono-ui text-[10.5px] t-muted">beyond code</span>
-      </div>
-
-      <div class="win-body p-6 sm:p-7 space-y-5">
-        <div>
-          <p class="font-mono-ui text-[10.5px] uppercase tracking-[0.16em] t-accent mb-1">Life Outside the Terminal</p>
-          <h2 class="font-serif-editorial text-3xl sm:text-4xl t-ink">How I recharge &amp; explore.</h2>
-        </div>
-
-        <div class="space-y-3.5">
-          <!-- Badminton -->
-          <div class="rounded-xl border t-card p-4 sm:p-5 flex gap-4 items-start theme-surface">
-            <div class="w-10 h-10 rounded-lg t-accent-badge border flex items-center justify-center shrink-0 mt-0.5">
-              <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                <ellipse cx="14.5" cy="9.5" rx="5.5" ry="6.5" transform="rotate(45 14.5 9.5)"></ellipse>
-                <path d="M9.8 14.2 4 20"></path>
-                <path d="M11 6.5 17.5 13"></path>
-              </svg>
-            </div>
-            <div>
-              <div class="flex items-center gap-2 flex-wrap">
-                <h3 class="font-serif-editorial text-2xl t-ink">Badminton</h3>
-                <span class="font-mono-ui text-[10px] uppercase tracking-wider t-muted">· Court &amp; Reflex</span>
+          <div class="space-y-4">
+            <!-- Badminton -->
+            <div class="rounded-xl border t-card p-5 flex gap-4 items-start theme-surface">
+              <div class="w-10 h-10 rounded-lg t-accent-badge border flex items-center justify-center shrink-0 mt-0.5">
+                <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <ellipse cx="14.5" cy="9.5" rx="5.5" ry="6.5" transform="rotate(45 14.5 9.5)"></ellipse>
+                  <path d="M9.8 14.2 4 20"></path>
+                  <path d="M11 6.5 17.5 13"></path>
+                </svg>
               </div>
-              <p class="text-[14.5px] t-body leading-relaxed mt-1">
-                Fast rallies and sharp reflexes — easily my favorite way to reset after a long session of debugging distributed systems.
-              </p>
-            </div>
-          </div>
-
-          <!-- Travelling & New Places -->
-          <div class="rounded-xl border t-card p-4 sm:p-5 flex gap-4 items-start theme-surface">
-            <div class="w-10 h-10 rounded-lg t-secondary-badge border flex items-center justify-center shrink-0 mt-0.5">
-              <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                <circle cx="12" cy="12" r="9"></circle>
-                <polygon points="15.8 8.2 13.7 13.7 8.2 15.8 10.3 10.3 15.8 8.2"></polygon>
-              </svg>
-            </div>
-            <div>
-              <div class="flex items-center gap-2 flex-wrap">
-                <h3 class="font-serif-editorial text-2xl t-ink">Travelling &amp; New Places</h3>
-                <span class="font-mono-ui text-[10px] uppercase tracking-wider t-muted">· Miles &amp; Detours</span>
+              <div>
+                <div class="flex items-center gap-2 flex-wrap">
+                  <h3 class="font-serif-editorial text-2xl t-ink">Badminton</h3>
+                  <span class="font-mono-ui text-[10px] uppercase tracking-wider t-muted">· Court &amp; Reflex</span>
+                </div>
+                <p class="text-[14.5px] t-body leading-relaxed mt-1">
+                  Fast rallies after a long day of debugging—keeps reflexes sharp, clears the head, and brings out a healthy competitive streak away from the keyboard.
+                </p>
               </div>
-              <p class="text-[14.5px] t-body leading-relaxed mt-1">
-                Always up for weekend getaways, hill views, and wandering unfamiliar neighborhoods to soak in how a new city moves.
-              </p>
             </div>
-          </div>
 
-          <!-- A Little Bit Foodie -->
-          <div class="rounded-xl border t-card p-4 sm:p-5 flex gap-4 items-start theme-surface">
-            <div class="w-10 h-10 rounded-lg t-accent-badge border flex items-center justify-center shrink-0 mt-0.5">
-              <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                <path d="M4 12h16a8 8 0 0 1-16 0Z"></path>
-                <path d="M9 20h6"></path>
-                <path d="M9 8c0-1.5 1-2 1-3.5"></path>
-                <path d="M14 8c0-1.5 1-2 1-3.5"></path>
-              </svg>
-            </div>
-            <div>
-              <div class="flex items-center gap-2 flex-wrap">
-                <h3 class="font-serif-editorial text-2xl t-ink">A Little Bit Foodie</h3>
-                <span class="font-mono-ui text-[10px] uppercase tracking-wider t-muted">· Local Favorites</span>
+            <!-- Travelling & New Places -->
+            <div class="rounded-xl border t-card p-5 flex gap-4 items-start theme-surface">
+              <div class="w-10 h-10 rounded-lg t-secondary-badge border flex items-center justify-center shrink-0 mt-0.5">
+                <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <circle cx="12" cy="12" r="9"></circle>
+                  <polygon points="15.8 8.2 13.7 13.7 8.2 15.8 10.3 10.3 15.8 8.2"></polygon>
+                </svg>
               </div>
-              <p class="text-[14.5px] t-body leading-relaxed mt-1">
-                Exploring local favorites, trying new flavors wherever I travel, and hunting down spots worth returning to with good company.
-              </p>
+              <div>
+                <div class="flex items-center gap-2 flex-wrap">
+                  <h3 class="font-serif-editorial text-2xl t-ink">Travelling &amp; New Places</h3>
+                  <span class="font-mono-ui text-[10px] uppercase tracking-wider t-muted">· Miles &amp; Detours</span>
+                </div>
+                <p class="text-[14.5px] t-body leading-relaxed mt-1">
+                  Always up for a change of scenery—weekend getaways to the hills, road trips, or wandering through an unfamiliar city just to soak in how it moves.
+                </p>
+              </div>
+            </div>
+
+            <!-- Foodie at Heart -->
+            <div class="rounded-xl border t-card p-5 flex gap-4 items-start theme-surface">
+              <div class="w-10 h-10 rounded-lg t-accent-badge border flex items-center justify-center shrink-0 mt-0.5">
+                <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M4 12h16a8 8 0 0 1-16 0Z"></path>
+                  <path d="M9 20h6"></path>
+                  <path d="M9 8c0-1.5 1-2 1-3.5"></path>
+                  <path d="M14 8c0-1.5 1-2 1-3.5"></path>
+                </svg>
+              </div>
+              <div>
+                <div class="flex items-center gap-2 flex-wrap">
+                  <h3 class="font-serif-editorial text-2xl t-ink">Foodie at Heart</h3>
+                  <span class="font-mono-ui text-[10px] uppercase tracking-wider t-muted">· The Culinary Trail</span>
+                </div>
+                <p class="text-[14.5px] t-body leading-relaxed mt-1">
+                  Half the joy of going somewhere new is discovering great food—hunting down local favorites, trying new flavors, and bookmarking spots worth returning to.
+                </p>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    </section>
 
-    <!-- ======================================================================
-         WINDOW 5: Contact.vcf (STARTS CLOSED)
-         ====================================================================== -->
-    <section
-      id="win-contact"
-      class="os-window is-closed"
-      data-window="contact"
-      data-title="Contact.vcf"
-      style="width: 520px; left: 390px; top: 96px; z-index: 17;"
-      aria-label="Contact.vcf Window"
-    >
-      <div class="win-titlebar" data-drag-handle="win-contact">
-        <div class="flex items-center gap-2">
-          <button type="button" data-close-win="win-contact" aria-label="Close Contact.vcf" title="Close" class="desktop-only traffic-dot bg-[#E05A47]"></button>
-          <button type="button" data-min-win="win-contact" aria-label="Minimize Contact.vcf" title="Minimize" class="desktop-only traffic-dot bg-[#E5B44A]"></button>
-          <button type="button" data-expand-win="win-contact" aria-label="Expand or Restore Contact.vcf" title="Expand / Restore" class="desktop-only traffic-dot bg-[#4EB66D]"></button>
-          <span class="font-mono-ui text-xs font-medium t-ink ml-1.5">Contact.vcf</span>
+        <!-- ==================================================================
+             APP 5: Contact.vcf (CALLING CARD)
+             ================================================================== -->
+        <div id="app-contact" class="app-view p-5 sm:p-8 space-y-6">
+          <div class="pb-4 border-b t-border">
+            <p class="font-mono-ui text-[10.5px] uppercase tracking-[0.16em] t-accent">Calling Card</p>
+            <h2 class="font-serif-editorial text-3xl sm:text-4xl t-ink mt-0.5">Let’s say hello.</h2>
+            <p class="text-[15px] t-muted mt-1">
+              Based in Gurgaon, Haryana, India. Always happy to talk distributed systems, AI engineering, travel spots, or a game of badminton.
+            </p>
+          </div>
+
+          <div class="space-y-3 max-w-xl">
+            <button
+              id="copy-email-btn"
+              type="button"
+              class="t-btn-primary w-full flex items-center justify-between px-4 py-3.5 rounded-xl transition-colors"
+            >
+              <span class="font-mono-ui text-xs sm:text-[13px] font-medium">myanurag0202@gmail.com</span>
+              <span id="copy-email-label" class="font-mono-ui text-[11px] opacity-90">Copy Email</span>
+            </button>
+
+            <a
+              href="tel:+919935561932"
+              class="w-full flex items-center justify-between px-4 py-3.5 rounded-xl border t-card t-ink hover:border-[var(--accent)] transition-colors"
+            >
+              <span class="font-mono-ui text-xs sm:text-[13px]">+91 9935561932</span>
+              <span class="font-mono-ui text-[11px] t-muted">Call &nearr;</span>
+            </a>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 max-w-xl">
+            <a
+              href="https://github.com/anurag-maurya"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="flex flex-col items-center justify-center p-4 rounded-xl border t-subtle t-ink hover:border-[var(--accent)] hover:text-[var(--accent)] transition-colors"
+            >
+              <span class="font-mono-ui text-xs font-medium">GitHub &nearr;</span>
+              <span class="font-mono-ui text-[10.5px] t-muted mt-1">anurag-maurya</span>
+            </a>
+            <a
+              href="https://linkedin.com/in/anuragmaurya"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="flex flex-col items-center justify-center p-4 rounded-xl border t-subtle t-ink hover:border-[var(--accent)] hover:text-[var(--accent)] transition-colors"
+            >
+              <span class="font-mono-ui text-xs font-medium">LinkedIn &nearr;</span>
+              <span class="font-mono-ui text-[10.5px] t-muted mt-1">in/anuragmaurya</span>
+            </a>
+            <a
+              href="https://leetcode.com/anurag"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="flex flex-col items-center justify-center p-4 rounded-xl border t-subtle t-ink hover:border-[var(--accent)] hover:text-[var(--accent)] transition-colors"
+            >
+              <span class="font-mono-ui text-xs font-medium">LeetCode &nearr;</span>
+              <span class="font-mono-ui text-[10.5px] t-muted mt-1">leetcode/anurag</span>
+            </a>
+          </div>
         </div>
-        <span class="font-mono-ui text-[10.5px] t-secondary">Gurgaon, India</span>
-      </div>
+      </section>
 
-      <div class="win-body p-6 sm:p-7 space-y-5">
-        <div class="pb-4 border-b t-border">
-          <p class="font-mono-ui text-[10.5px] uppercase tracking-[0.16em] t-accent">Calling Card</p>
-          <h2 class="font-serif-editorial text-3xl sm:text-4xl t-ink mt-0.5">Let’s say hello.</h2>
-          <p class="text-[14.5px] t-muted mt-1">
-            Based in Gurgaon, India. Always happy to talk distributed systems, AI engineering, travel spots, or a game of badminton.
-          </p>
-        </div>
-
-        <!-- Primary Contact Actions -->
-        <div class="space-y-2.5">
-          <button
-            type="button"
-            data-copy-email
-            class="t-btn-primary w-full flex items-center justify-between px-4 py-3.5 rounded-xl transition-colors"
-          >
-            <span class="font-mono-ui text-xs sm:text-[13px] font-medium">myanurag0202@gmail.com</span>
-            <span class="font-mono-ui text-[11px] opacity-90">Click to Copy</span>
-          </button>
-
-          <a
-            href="tel:+919935561932"
-            class="w-full flex items-center justify-between px-4 py-3.5 rounded-xl border t-card t-ink hover:border-[var(--accent)] transition-colors"
-          >
-            <span class="font-mono-ui text-xs sm:text-[13px]">+91 9935561932</span>
-            <span class="font-mono-ui text-[11px] t-muted">Call &nearr;</span>
-          </a>
-        </div>
-
-        <!-- External Links -->
-        <div class="grid grid-cols-3 gap-2.5 pt-1">
-          <a
-            href="https://github.com/anurag-maurya"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="flex flex-col items-center justify-center p-3.5 rounded-xl border t-subtle t-ink hover:border-[var(--accent)] hover:text-[var(--accent)] transition-colors"
-          >
-            <span class="font-mono-ui text-xs font-medium">GitHub</span>
-            <span class="font-mono-ui text-[10px] t-muted mt-0.5">anurag-maurya</span>
-          </a>
-          <a
-            href="https://linkedin.com/in/anurag-maurya"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="flex flex-col items-center justify-center p-3.5 rounded-xl border t-subtle t-ink hover:border-[var(--accent)] hover:text-[var(--accent)] transition-colors"
-          >
-            <span class="font-mono-ui text-xs font-medium">LinkedIn</span>
-            <span class="font-mono-ui text-[10px] t-muted mt-0.5">anuragmaurya</span>
-          </a>
-          <a
-            href="https://leetcode.com/A_Maurya"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="flex flex-col items-center justify-center p-3.5 rounded-xl border t-subtle t-ink hover:border-[var(--accent)] hover:text-[var(--accent)] transition-colors"
-          >
-            <span class="font-mono-ui text-xs font-medium">LeetCode</span>
-            <span class="font-mono-ui text-[10px] t-muted mt-0.5">/anurag</span>
-          </a>
-        </div>
-      </div>
-    </section>
-
+    </div>
   </main>
 
   <!-- ========================================================================
-       3. ALWAYS-VISIBLE FIXED BOTTOM FROSTED DOCK (5 APPS)
+       3. FIXED FROSTED-GLASS BOTTOM DOCK
        ======================================================================== -->
-  <nav aria-label="Desk Dock" class="dock-wrapper">
-    <div class="desk-dock rounded-2xl px-2 py-1.5 flex items-center gap-1 sm:gap-1.5">
-
-      <button type="button" data-dock="win-readme" class="dock-btn is-open is-active flex flex-col items-center gap-1 px-2.5 sm:px-4 py-1.5 rounded-xl">
+  <nav aria-label="Application Dock" class="dock-wrapper">
+    <div class="desk-dock theme-surface">
+      <button type="button" data-dock-app="readme" class="dock-btn is-active">
         <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
           <path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"></path>
           <polyline points="14 2 14 8 20 8"></polyline>
           <line x1="16" y1="13" x2="8" y2="13"></line>
           <line x1="16" y1="17" x2="8" y2="17"></line>
         </svg>
-        <span class="font-mono-ui text-[10px] sm:text-[11px] whitespace-nowrap">README.md</span>
+        <span class="font-mono-ui text-[10px] sm:hidden">About</span>
+        <span class="font-mono-ui text-[11px] hidden sm:inline">README.md</span>
         <span class="dock-dot"></span>
       </button>
 
-      <button type="button" data-dock="win-systems" class="dock-btn flex flex-col items-center gap-1 px-2.5 sm:px-4 py-1.5 rounded-xl">
+      <button type="button" data-dock-app="systems" class="dock-btn">
         <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
           <rect x="3" y="3" width="7" height="7" rx="1"></rect>
           <rect x="14" y="3" width="7" height="7" rx="1"></rect>
           <rect x="14" y="14" width="7" height="7" rx="1"></rect>
           <rect x="3" y="14" width="7" height="7" rx="1"></rect>
         </svg>
-        <span class="font-mono-ui text-[10px] sm:text-[11px] whitespace-nowrap">Systems/</span>
+        <span class="font-mono-ui text-[10px] sm:hidden">Systems</span>
+        <span class="font-mono-ui text-[11px] hidden sm:inline">Systems/</span>
         <span class="dock-dot"></span>
       </button>
 
-      <button type="button" data-dock="win-career" class="dock-btn flex flex-col items-center gap-1 px-2.5 sm:px-4 py-1.5 rounded-xl">
+      <button type="button" data-dock-app="career" class="dock-btn">
         <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
           <rect x="2" y="7" width="20" height="14" rx="2"></rect>
           <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
         </svg>
-        <span class="font-mono-ui text-[10px] sm:text-[11px] whitespace-nowrap">Career.log</span>
+        <span class="font-mono-ui text-[10px] sm:hidden">Career</span>
+        <span class="font-mono-ui text-[11px] hidden sm:inline">Career.log</span>
         <span class="dock-dot"></span>
       </button>
 
-      <button type="button" data-dock="win-hobbies" class="dock-btn flex flex-col items-center gap-1 px-2.5 sm:px-4 py-1.5 rounded-xl">
+      <button type="button" data-dock-app="hobbies" class="dock-btn">
         <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
           <circle cx="12" cy="12" r="9"></circle>
           <polygon points="15.8 8.2 13.7 13.7 8.2 15.8 10.3 10.3 15.8 8.2"></polygon>
         </svg>
-        <span class="font-mono-ui text-[10px] sm:text-[11px] whitespace-nowrap">Off the Clock</span>
+        <span class="font-mono-ui text-[10px] sm:hidden">Life</span>
+        <span class="font-mono-ui text-[11px] hidden sm:inline">Off the Clock</span>
         <span class="dock-dot"></span>
       </button>
 
-      <button type="button" data-dock="win-contact" class="dock-btn flex flex-col items-center gap-1 px-2.5 sm:px-4 py-1.5 rounded-xl">
+      <button type="button" data-dock-app="contact" class="dock-btn">
         <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
           <rect x="2" y="4" width="20" height="16" rx="2"></rect>
           <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
         </svg>
-        <span class="font-mono-ui text-[10px] sm:text-[11px] whitespace-nowrap">Contact</span>
+        <span class="font-mono-ui text-[10px] sm:hidden">Contact</span>
+        <span class="font-mono-ui text-[11px] hidden sm:inline">Contact</span>
         <span class="dock-dot"></span>
       </button>
-
     </div>
   </nav>
 
   <!-- ========================================================================
-       4. INTERACTIVE OS ENGINE (CENTERED STAGE, THEME, TRAFFIC LIGHTS, EXPLORER)
+       4. INTERACTIVE LOGIC (THEME, APP SWITCHER, STACK FILTER, SYSTEMS, COPY)
        ======================================================================== -->
   <script>
     (function () {
       'use strict';
 
-      const DESKTOP_BREAKPOINT = 960;
-      const STAGE_WIDTH = 1160;
-      const THEME_STORAGE_KEY = 'anurag_desk_theme_v2';
-      const VALID_THEMES = ['midnight', 'paper', 'sage'];
-
-      let topZ = 30;
-      const windows = Array.from(document.querySelectorAll('.os-window'));
-      const dockButtons = Array.from(document.querySelectorAll('[data-dock]'));
-      const activeAppLabel = document.getElementById('active-app-label');
-
-      // Preferred widths for each window when opened on desktop
-      const PREFERRED_WIDTHS = {
-        'win-readme': 840,
-        'win-systems': 920,
-        'win-career': 780,
-        'win-hobbies': 680,
-        'win-contact': 520
-      };
-
-      // Saved geometry for Expand / Restore traffic-light toggle
-      const savedBounds = {};
-
-      function isDesktop() {
-        return window.innerWidth >= DESKTOP_BREAKPOINT;
-      }
-
-      function getStageLeft() {
-        return Math.max(24, Math.floor((window.innerWidth - STAGE_WIDTH) / 2));
-      }
-
       /* ----------------------------------------------------------------------
-         A. 3-THEME COLOR SWITCHER (MIDNIGHT DEFAULT + LOCALSTORAGE V2)
+         A. 3-THEME SWITCHER (MIDNIGHT DEFAULT + LOCALSTORAGE V3)
          ---------------------------------------------------------------------- */
-      const themeButtons = Array.from(document.querySelectorAll('[data-set-theme]'));
+      const THEME_KEY = 'anurag_desk_theme_v3';
+      const VALID_THEMES = ['midnight', 'paper', 'sage'];
+      const themeButtons = document.querySelectorAll('[data-set-theme]');
 
-      function applyTheme(themeName, persist) {
-        const nextTheme = VALID_THEMES.indexOf(themeName) !== -1 ? themeName : 'midnight';
-        document.documentElement.setAttribute('data-theme', nextTheme);
-
+      function applyTheme(theme, persist) {
+        const next = VALID_THEMES.indexOf(theme) !== -1 ? theme : 'midnight';
+        document.documentElement.setAttribute('data-theme', next);
         themeButtons.forEach(function (btn) {
-          const active = btn.getAttribute('data-set-theme') === nextTheme;
+          const active = btn.getAttribute('data-set-theme') === next;
           btn.classList.toggle('is-active', active);
           btn.setAttribute('aria-pressed', active ? 'true' : 'false');
         });
-
         if (persist) {
-          try {
-            localStorage.setItem(THEME_STORAGE_KEY, nextTheme);
-          } catch (err) {}
+          try { localStorage.setItem(THEME_KEY, next); } catch (e) {}
         }
       }
 
       (function initTheme() {
-        let saved = 'midnight';
+        let initial = 'midnight';
         try {
-          const stored = localStorage.getItem(THEME_STORAGE_KEY);
-          if (stored && VALID_THEMES.indexOf(stored) !== -1) {
-            saved = stored;
-          }
-        } catch (err) {}
-        applyTheme(saved, false);
+          const stored = localStorage.getItem(THEME_KEY);
+          if (stored && VALID_THEMES.indexOf(stored) !== -1) initial = stored;
+        } catch (e) {}
+        applyTheme(initial, false);
       })();
 
       themeButtons.forEach(function (btn) {
@@ -1325,19 +1223,19 @@
       });
 
       /* ----------------------------------------------------------------------
-         B. LIVE IST CLOCK (ASIA/KOLKATA)
+         B. LIVE IST CLOCK
          ---------------------------------------------------------------------- */
       const clockEl = document.getElementById('ist-clock');
       function updateISTClock() {
         if (!clockEl) return;
         try {
-          const formatted = new Intl.DateTimeFormat('en-IN', {
+          const timeStr = new Intl.DateTimeFormat('en-IN', {
             timeZone: 'Asia/Kolkata',
             hour: '2-digit',
             minute: '2-digit',
             hour12: true
           }).format(new Date());
-          clockEl.textContent = formatted.toUpperCase() + ' IST';
+          clockEl.textContent = timeStr.toUpperCase() + ' IST';
         } catch (e) {
           clockEl.textContent = 'IST';
         }
@@ -1346,425 +1244,142 @@
       setInterval(updateISTClock, 15000);
 
       /* ----------------------------------------------------------------------
-         C. WINDOW FOCUS, OPEN (CENTERED WITH CASCADE), CLOSE, EXPAND & DOCK SYNC
+         C. APP SWITCHER + FOCUS/WIDE MODE TOGGLE
          ---------------------------------------------------------------------- */
-      function updateActiveLabel(win) {
-        if (!activeAppLabel) return;
-        activeAppLabel.textContent = win ? (win.getAttribute('data-title') || 'Desk') : 'Desk';
-      }
+      const APP_META = {
+        readme: { title: 'README.md', subtitle: 'anuragmaurya.in · overview' },
+        systems: { title: 'Systems/', subtitle: '6 Delhivery production case studies' },
+        career: { title: 'Career.log', subtitle: '2017 — present' },
+        hobbies: { title: 'Off_the_Clock.notes', subtitle: 'beyond code' },
+        contact: { title: 'Contact.vcf', subtitle: 'Gurgaon, Haryana, India' }
+      };
 
-      function syncDock() {
-        let focusedWin = null;
+      const menubarAppName = document.getElementById('menubar-app-name');
+      const windowTitle = document.getElementById('window-title');
+      const windowSubtitle = document.getElementById('window-subtitle');
+      const dockButtons = document.querySelectorAll('[data-dock-app]');
+      const appViews = document.querySelectorAll('.app-view');
+
+      function switchApp(appKey) {
+        const meta = APP_META[appKey];
+        if (!meta) return;
+
+        appViews.forEach(function (view) {
+          view.classList.toggle('is-active', view.id === 'app-' + appKey);
+        });
+
         dockButtons.forEach(function (btn) {
-          const id = btn.getAttribute('data-dock');
-          const win = document.getElementById(id);
-          if (!win) return;
-
-          if (isDesktop()) {
-            const isOpen = !win.classList.contains('is-closed');
-            const isFocused = win.classList.contains('is-focused') && isOpen;
-            btn.classList.toggle('is-open', isOpen);
-            btn.classList.toggle('is-active', isFocused);
-            if (isFocused) focusedWin = win;
-          } else {
-            const isActive = win.classList.contains('mobile-active');
-            btn.classList.toggle('is-open', isActive);
-            btn.classList.toggle('is-active', isActive);
-            if (isActive) focusedWin = win;
-          }
+          btn.classList.toggle('is-active', btn.getAttribute('data-dock-app') === appKey);
         });
-        updateActiveLabel(focusedWin);
+
+        if (menubarAppName) menubarAppName.textContent = meta.title;
+        if (windowTitle) windowTitle.textContent = meta.title;
+        if (windowSubtitle) windowSubtitle.textContent = meta.subtitle;
+
+        window.scrollTo({ top: 0, behavior: 'smooth' });
       }
 
-      function positionCenteredInStage(win) {
-        const vw = window.innerWidth;
-        const openCount = windows.filter(function (w) {
-          return w !== win && !w.classList.contains('is-closed');
-        }).length;
-
-        const targetW = Math.min(PREFERRED_WIDTHS[win.id] || 760, vw - 48);
-        const offset = Math.min(openCount, 4) * 24;
-        const baseLeft = Math.max(24, Math.floor((vw - targetW) / 2));
-        const clampedLeft = Math.min(vw - targetW - 24, baseLeft + offset);
-        const clampedTop = Math.min(window.innerHeight - 240, 68 + offset);
-
-        win.style.width = targetW + 'px';
-        win.style.height = '';
-        win.style.left = Math.max(24, clampedLeft) + 'px';
-        win.style.top = Math.max(56, clampedTop) + 'px';
-      }
-
-      function focusWindow(win, autoCenterIfClosed) {
-        if (!win) return;
-        if (isDesktop()) {
-          const wasClosed = win.classList.contains('is-closed');
-          if (wasClosed && autoCenterIfClosed !== false && win.id !== 'win-readme') {
-            win.classList.remove('is-expanded');
-            delete savedBounds[win.id];
-            positionCenteredInStage(win);
-          }
-          win.classList.remove('is-closed');
-          windows.forEach(function (w) { w.classList.remove('is-focused'); });
-          topZ += 1;
-          win.style.zIndex = topZ;
-          win.classList.add('is-focused');
-        } else {
-          windows.forEach(function (w) { w.classList.remove('mobile-active'); });
-          win.classList.add('mobile-active');
-          win.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-        }
-        syncDock();
-      }
-
-      function closeWindow(win) {
-        if (!win || !isDesktop()) return;
-        win.classList.add('is-closed');
-        win.classList.remove('is-focused');
-
-        const openWins = windows
-          .filter(function (w) { return !w.classList.contains('is-closed'); })
-          .sort(function (a, b) {
-            return (parseInt(b.style.zIndex, 10) || 0) - (parseInt(a.style.zIndex, 10) || 0);
-          });
-        if (openWins.length > 0) {
-          openWins[0].classList.add('is-focused');
-        }
-        syncDock();
-      }
-
-      function toggleExpandWindow(win) {
-        if (!win || !isDesktop()) return;
-        focusWindow(win, false);
-
-        if (win.classList.contains('is-expanded')) {
-          const prev = savedBounds[win.id];
-          win.classList.remove('is-expanded');
-          if (prev) {
-            win.style.left = prev.left;
-            win.style.top = prev.top;
-            win.style.width = prev.width;
-            win.style.height = prev.height;
-          }
-          delete savedBounds[win.id];
-        } else {
-          savedBounds[win.id] = {
-            left: win.style.left,
-            top: win.style.top,
-            width: win.style.width,
-            height: win.style.height
-          };
-          win.classList.add('is-expanded');
-          win.style.left = '28px';
-          win.style.top = '54px';
-          win.style.width = (window.innerWidth - 56) + 'px';
-          win.style.height = (window.innerHeight - 144) + 'px';
-        }
-      }
-
-      // Click anywhere on a window to bring it forward
-      windows.forEach(function (win) {
-        win.addEventListener('pointerdown', function () {
-          if (isDesktop()) focusWindow(win, false);
-        });
-      });
-
-      // Traffic-light buttons
-      document.querySelectorAll('[data-close-win], [data-min-win]').forEach(function (btn) {
-        btn.addEventListener('click', function (e) {
-          e.stopPropagation();
-          const id = btn.getAttribute('data-close-win') || btn.getAttribute('data-min-win');
-          closeWindow(document.getElementById(id));
-        });
-      });
-
-      document.querySelectorAll('[data-expand-win]').forEach(function (btn) {
-        btn.addEventListener('click', function (e) {
-          e.stopPropagation();
-          toggleExpandWindow(document.getElementById(btn.getAttribute('data-expand-win')));
-        });
-      });
-
-      // Dock toggles
       dockButtons.forEach(function (btn) {
         btn.addEventListener('click', function () {
-          const win = document.getElementById(btn.getAttribute('data-dock'));
-          if (!win) return;
-          if (isDesktop() && !win.classList.contains('is-closed') && win.classList.contains('is-focused')) {
-            closeWindow(win);
-          } else {
-            focusWindow(win, true);
-          }
+          switchApp(btn.getAttribute('data-dock-app'));
         });
       });
 
-      // In-app shortcut buttons
-      document.querySelectorAll('[data-open-win]').forEach(function (btn) {
+      document.querySelectorAll('[data-switch-app]').forEach(function (btn) {
         btn.addEventListener('click', function () {
-          focusWindow(document.getElementById(btn.getAttribute('data-open-win')), true);
+          switchApp(btn.getAttribute('data-switch-app'));
         });
       });
 
+      // Green traffic-light dot toggles Wide Focus Mode on desktop without breaking scroll
+      const focusBtn = document.getElementById('focus-mode-btn');
+      const deskGrid = document.getElementById('desk-grid');
+      if (focusBtn && deskGrid) {
+        focusBtn.addEventListener('click', function () {
+          deskGrid.classList.toggle('focus-mode');
+        });
+      }
+
       /* ----------------------------------------------------------------------
-         D. CENTERED DEFAULT DESK LAYOUT, RESET & CASCADE
+         D. TECHNICAL STACK FILTER PILLS (README.md)
          ---------------------------------------------------------------------- */
-      function applyDefaultLayout() {
-        if (!isDesktop()) {
-          syncDock();
-          return;
-        }
+      const filterPills = document.querySelectorAll('[data-stack-filter]');
+      const stackChips = document.querySelectorAll('.stack-chip');
 
-        const vw = window.innerWidth;
-        const stageLeft = getStageLeft();
-
-        // Left column: Polaroid (top 68px) + Sticky Note (top 385px)
-        const polaroid = document.getElementById('desk-polaroid');
-        const sticky = document.getElementById('desk-sticky');
-        if (polaroid) {
-          polaroid.style.width = '260px';
-          polaroid.style.left = stageLeft + 'px';
-          polaroid.style.top = '68px';
-          polaroid.style.zIndex = 12;
-        }
-        if (sticky) {
-          sticky.style.width = '260px';
-          sticky.style.left = stageLeft + 'px';
-          sticky.style.top = '385px';
-          sticky.style.zIndex = 11;
-        }
-
-        // Right main area: ONLY README.md open initially, filling stage cleanly
-        const readme = document.getElementById('win-readme');
-        const readmeLeft = stageLeft + 292;
-        const readmeWidth = Math.min(840, vw - readmeLeft - 24);
-
-        windows.forEach(function (w) {
-          w.classList.remove('is-expanded');
-          delete savedBounds[w.id];
-          w.style.height = '';
-          if (w.id === 'win-readme') {
-            w.style.width = Math.max(540, readmeWidth) + 'px';
-            w.style.left = readmeLeft + 'px';
-            w.style.top = '68px';
-            w.classList.remove('is-closed');
-          } else {
-            w.classList.add('is-closed');
-            w.classList.remove('is-focused');
-          }
+      filterPills.forEach(function (pill) {
+        pill.addEventListener('click', function () {
+          const cat = pill.getAttribute('data-stack-filter');
+          filterPills.forEach(function (p) { p.classList.toggle('is-active', p === pill); });
+          stackChips.forEach(function (chip) {
+            const match = cat === 'all' || chip.getAttribute('data-cat') === cat;
+            chip.style.display = match ? 'inline-block' : 'none';
+          });
         });
-
-        topZ = 30;
-        if (readme) focusWindow(readme, false);
-      }
-
-      function cascadeAllWindows() {
-        if (!isDesktop()) return;
-        const stageLeft = getStageLeft();
-        const order = ['win-contact', 'win-hobbies', 'win-career', 'win-systems', 'win-readme'];
-        order.forEach(function (id, index) {
-          const win = document.getElementById(id);
-          if (!win) return;
-          win.classList.remove('is-expanded', 'is-closed');
-          delete savedBounds[win.id];
-          win.style.height = '';
-          const w = Math.min(PREFERRED_WIDTHS[id] || 760, window.innerWidth - 64);
-          win.style.width = w + 'px';
-          win.style.left = Math.min(window.innerWidth - w - 24, stageLeft + 140 + index * 32) + 'px';
-          win.style.top = (62 + index * 24) + 'px';
-          focusWindow(win, false);
-        });
-      }
-
-      const resetBtn = document.getElementById('reset-desk-btn');
-      if (resetBtn) resetBtn.addEventListener('click', applyDefaultLayout);
-
-      const cascadeBtn = document.getElementById('cascade-btn');
-      if (cascadeBtn) cascadeBtn.addEventListener('click', cascadeAllWindows);
-
-      applyDefaultLayout();
-
-      let resizeTimer = null;
-      window.addEventListener('resize', function () {
-        clearTimeout(resizeTimer);
-        resizeTimer = setTimeout(function () {
-          if (isDesktop()) {
-            // Re-center stage smoothly if only README is open in default state
-            const openWins = windows.filter(function (w) { return !w.classList.contains('is-closed'); });
-            if (openWins.length === 1 && openWins[0].id === 'win-readme' && !openWins[0].classList.contains('is-expanded')) {
-              applyDefaultLayout();
-            } else {
-              syncDock();
-            }
-          } else {
-            syncDock();
-          }
-        }, 120);
       });
 
       /* ----------------------------------------------------------------------
-         E. SMOOTH POINTER DRAGGING FOR WINDOWS, POLAROID & STICKY NOTE
-         ---------------------------------------------------------------------- */
-      function enableDrag(targetEl, handleEl) {
-        if (!targetEl || !handleEl) return;
-
-        let dragging = false;
-        let startX = 0;
-        let startY = 0;
-        let origLeft = 0;
-        let origTop = 0;
-
-        handleEl.addEventListener('pointerdown', function (e) {
-          if (!isDesktop()) return;
-          if (e.target.closest('button, a')) return;
-          if (targetEl.classList.contains('is-expanded')) return;
-
-          dragging = true;
-          startX = e.clientX;
-          startY = e.clientY;
-          origLeft = targetEl.offsetLeft;
-          origTop = targetEl.offsetTop;
-
-          if (targetEl.classList.contains('os-window')) {
-            focusWindow(targetEl, false);
-          } else {
-            topZ += 1;
-            targetEl.style.zIndex = topZ;
-          }
-
-          if (handleEl.setPointerCapture) {
-            try { handleEl.setPointerCapture(e.pointerId); } catch (err) {}
-          }
-        });
-
-        handleEl.addEventListener('pointermove', function (e) {
-          if (!dragging) return;
-          const dx = e.clientX - startX;
-          const dy = e.clientY - startY;
-
-          const maxLeft = window.innerWidth - 110;
-          const maxTop = window.innerHeight - 130;
-
-          const nextLeft = Math.max(-targetEl.offsetWidth + 110, Math.min(maxLeft, origLeft + dx));
-          const nextTop = Math.max(46, Math.min(maxTop, origTop + dy));
-
-          targetEl.style.left = nextLeft + 'px';
-          targetEl.style.top = nextTop + 'px';
-        });
-
-        function stopDrag(e) {
-          if (!dragging) return;
-          dragging = false;
-          if (handleEl.releasePointerCapture) {
-            try { handleEl.releasePointerCapture(e.pointerId); } catch (err) {}
-          }
-        }
-
-        handleEl.addEventListener('pointerup', stopDrag);
-        handleEl.addEventListener('pointercancel', stopDrag);
-      }
-
-      document.querySelectorAll('[data-drag-handle]').forEach(function (handle) {
-        enableDrag(document.getElementById(handle.getAttribute('data-drag-handle')), handle);
-      });
-      enableDrag(document.getElementById('desk-polaroid'), document.getElementById('desk-polaroid'));
-      enableDrag(document.getElementById('desk-sticky'), document.getElementById('desk-sticky'));
-
-      /* ----------------------------------------------------------------------
-         F. SYSTEMS/ TWO-PANE EXPLORER (6 REORDERED DELHIVERY CASE STUDIES)
+         E. SYSTEMS/ EXPLORER (6 DELHIVERY CASE STUDIES)
          ---------------------------------------------------------------------- */
       const systemsData = {
         dynamodb: {
           filename: 'Systems/01_dynamodb_opensearch_cdc.sys',
           title: 'DynamoDB + OpenSearch Real-Time CDC Migration',
-          badges: ['7–8s → 400–500ms Peak', '1.1s → 250ms Avg'],
-          overview: 'Co-designed (3-engineer team) a DynamoDB-backed architecture to replace a costly, high-latency external SaaS backend service powering core operational APIs.',
-          pipeline: [
-            'Client API',
-            'Rewritten Service (Cache + Concurrency)',
-            'DynamoDB (12 Tables)',
-            'AWS Lambda CDC Stream',
-            'OpenSearch Index'
-          ],
-          deepDive: 'Migrated 12 tables end-to-end and rewrote a complete microservice from scratch. Built a real-time AWS Lambda CDC pipeline syncing DynamoDB writes to OpenSearch, while handling concurrency, caching, and race conditions across high-throughput endpoints.',
-          impact: 'Cut peak API latency from 7–8 seconds down to 400–500ms, reduced average latency from 1.1s to 250ms, and eliminated dependency on an expensive external service.',
-          tags: ['DynamoDB', '12 Tables Migrated', 'AWS Lambda CDC', 'OpenSearch', 'Caching', 'Concurrency']
+          badges: ['7–8s → 400–500ms Peak', '1.1s → 250ms Avg', '12 Tables Migrated'],
+          overview: 'Co-designed (3-engineer team) a DynamoDB-backed architecture with an AWS Lambda CDC pipeline syncing writes to OpenSearch in real time, replacing a costly, high-latency external backend SaaS service.',
+          detailLabel: 'What I Owned',
+          detailBody: 'Completed migration of 12 tables and rewrote an entire core service from scratch—handling high concurrency, multi-layer caching, and race-condition prevention.',
+          pipeline: ['Client API', 'Rewritten Service (Cache + Concurrency)', 'DynamoDB (12 Tables)', 'Lambda CDC Stream', 'OpenSearch Index'],
+          tags: ['AWS DynamoDB', 'AWS Lambda CDC', 'OpenSearch', '12 Tables', 'Concurrency', 'Caching']
         },
         billing: {
           filename: 'Systems/02_billing_state_machine.sys',
           title: 'Distributed B2B Financial & Billing Engine',
-          badges: ['Redis Locks', '70% Faster Delivery'],
-          overview: 'Architected the end-to-end B2B financial workflow covering Invoices, Debit Notes, and Credit Notes across shippers and transporters.',
-          pipeline: [
-            'Create Invoice Trigger',
-            'Redis Distributed Lock (Charges)',
-            'Distributed State Machine',
-            'Immutable Financial Ledger'
-          ],
-          deepDive: 'Solved critical race conditions—such as when a transporter initiates invoice creation while a shipper simultaneously attempts to modify trip charges. Implemented Redis distributed locking on charge records alongside a strict state machine so concurrent edits are safely blocked during billing transitions.',
-          impact: 'Eliminated billing discrepancies from concurrent updates and cut planning-to-production delivery time by 70% using AI-assisted workflows (Cursor / Kiro).',
+          badges: ['Redis Charge Locking', '70% Faster Delivery'],
+          overview: 'Architected the end-to-end B2B financial workflow covering Invoices, Debit Notes, and Credit Notes using a deterministic distributed state machine.',
+          detailLabel: 'Concurrency Fix',
+          detailBody: 'Implemented Redis distributed locks around billing charges—the moment a transporter clicks "Create Invoice", all associated charges are locked so shippers cannot concurrently modify them mid-generation, completely eliminating financial race conditions. Cut planning-to-production time by 70% using AI IDEs (Cursor/Kiro).',
+          pipeline: ['Transporter Create Invoice', 'Redis Charge Lock', 'Distributed State Machine', 'Immutable Ledger (Invoices / Notes)'],
           tags: ['State Machine', 'Redis Distributed Locks', 'B2B Finance', 'Cursor / Kiro']
         },
         priya: {
           filename: 'Systems/03_voice_agent_priya.sys',
-          title: 'Autonomous Voice Agent “Priya” & Multi-Agent Fallback',
+          title: 'Autonomous Voice Agent ("Priya") & Multi-Agent Fallback',
           badges: ['~20 Calls/Day per Transporter', '60%+ Auto-Resolved'],
-          overview: 'Engineered a 24/7 autonomous voice agent handling operational transporter queries via an internal Model Context Protocol (MCP) server.',
-          pipeline: [
-            'Transporter Call',
-            'Voice Agent "Priya"',
-            'Internal MCP Server (Token Auth)',
-            'Microservice APIs',
-            'ReachAll Outbound Fallback',
-            'WhatsApp Summary'
-          ],
-          deepDive: 'Built the internal MCP server managing secure, token-based authentication to expose internal microservice APIs as structured LLM tools. Designed a multi-agent fallback loop with ReachAll APIs where an outbound agent auto-calls transporters for missing context and aggregates the outcome back over WhatsApp.',
-          impact: 'Handles ~20 calls/day per transporter with 60%+ of queries resolved autonomously without human intervention.',
+          overview: 'Engineered a 24/7 autonomous voice agent for transporter queries powered by an internal Model Context Protocol (MCP) server enforcing secure, token-based auth to expose microservice APIs as LLM tools.',
+          detailLabel: 'Multi-Agent Fallback Loop',
+          detailBody: 'When live context is missing, a fallback workflow via ReachAll APIs triggers an outbound voice agent to auto-call the transporter, collect missing details, and aggregate the final update back to the user over WhatsApp.',
+          pipeline: ['Transporter Call', 'Voice Agent "Priya"', 'Internal MCP Server (Token Auth)', 'Microservice APIs', 'ReachAll Fallback', 'WhatsApp Update'],
           tags: ['MCP Server', 'Token Auth', 'Voice AI', 'ReachAll APIs', 'WhatsApp']
         },
         superset: {
           filename: 'Systems/04_superset_analytics_migration.sys',
-          title: 'Self-Hosted Apache Superset & Analytics Consolidation',
+          title: 'QuickSight & Redash → Self-Hosted Apache Superset',
           badges: ['40+ Customers', '$0 Per-User Licensing'],
-          overview: 'Migrated customer-facing analytics end-to-end from paid AWS QuickSight ($3/user) to self-hosted Apache Superset and consolidated scheduled reporting previously handled by Redash.',
-          pipeline: [
-            'Operational DBs',
-            'Self-Hosted Apache Superset',
-            'Auto-Provisioned Dashboards + Scheduled Reports',
-            '40+ Enterprise Customers'
-          ],
-          deepDive: 'Removed the manual per-user onboarding bottleneck required by QuickSight—where every user across 40+ multi-user customer accounts had to be manually provisioned and billed individually. Configured default, scalable access and unified report scheduling onto Superset.',
-          impact: 'Eliminated $3/user QuickSight licensing costs completely, removed manual user provisioning, and retired separate Redash scheduling workflows into a single platform.',
-          tags: ['Apache Superset', 'AWS QuickSight Migration', 'Redash Consolidation', 'Self-Hosted BI']
+          overview: 'Migrated customer analytics end-to-end from paid Amazon QuickSight ($3/user) to self-hosted Apache Superset for 40+ customers, each with multiple dashboard users.',
+          detailLabel: 'Operational & Platform Win',
+          detailBody: 'Eliminated per-seat licensing costs completely, removed the manual step of provisioning each user in QuickSight (all users now get scalable default access), and consolidated scheduled reporting previously handled in Redash onto Superset as a single unified platform.',
+          pipeline: ['Warehouse / DBs', 'Self-Hosted Apache Superset', 'Auto-Provisioned Dashboards (40+ Orgs) + Unified Report Scheduling'],
+          tags: ['Apache Superset', 'QuickSight Migration', 'Redash Consolidation', 'Self-Hosted BI']
         },
         invoice: {
           filename: 'Systems/05_ai_invoice_validator.sys',
           title: 'Hybrid AI Invoice Validation Engine',
-          badges: ['Gemini LLM + Python', 'Human-in-the-Loop'],
-          overview: 'Developed a hybrid validation engine combining Gemini LLM with deterministic Python rules to parse unstructured transporter PDFs and audit freight charges.',
-          pipeline: [
-            'Unstructured Transporter PDFs',
-            'Gemini LLM + Python Parser',
-            'Contract & SLA Cross-Check',
-            'Auto-Approve / HITL Review'
-          ],
-          deepDive: 'Extracts line items from inconsistent invoice formats, cross-checks billed freight charges against active contracts, flags SLA deviations, and routes low-confidence extractions to a human-in-the-loop fallback queue.',
-          impact: 'Automated freight invoice auditing while maintaining financial accuracy through deterministic contract rules and low-confidence human review.',
-          tags: ['Gemini LLM', 'Python', 'PDF Extraction', 'SLA Validation', 'HITL Queue']
+          badges: ['Gemini LLM + Python', 'Confidence-Gated HITL'],
+          overview: 'Built a hybrid validation engine combining Gemini LLM with deterministic Python rules to parse unstructured transporter PDFs, cross-check billed freight charges against active contracts, and flag SLA deviations automatically.',
+          detailLabel: 'Safety Net',
+          detailBody: 'Routes low-confidence extractions to a human-in-the-loop (HITL) review queue so financial accuracy is never compromised.',
+          pipeline: ['Unstructured PDFs', 'Gemini LLM + Python Parser', 'Contract & SLA Cross-Check', 'Confidence-Gated HITL Queue'],
+          tags: ['Gemini LLM', 'Python', 'PDF Parsing', 'SLA Validation', 'HITL']
         },
         ecosystem: {
           filename: 'Systems/06_kafka_redis_ecosystem.sys',
           title: 'High-Scale Microservices Ecosystem',
           badges: ['15+ Services', 'Lakhs of Txns/Day'],
-          overview: 'Scale and maintain a 15+ service distributed logistics ecosystem powered by Kafka event-driven communication and Redis caching/locking, processing lakhs of transactions daily.',
-          pipeline: [
-            'Event Producers',
-            'Kafka Event Bus',
-            '15+ Microservices',
-            'Redis Cache & Locks',
-            'Production Stores (Lakhs/Day)'
-          ],
-          deepDive: 'Maintains reliable event-driven inter-service communication with Kafka alongside distributed caching and locking with Redis to keep core TransportOne logistics workflows fast and resilient.',
-          impact: 'Sustains high availability and predictable latency across lakhs of daily production transactions.',
-          tags: ['Kafka', 'Redis', 'Microservices', 'Distributed Systems']
+          overview: 'Scaling and maintaining a 15+ microservice distributed ecosystem powered by Apache Kafka (event-driven communication) and Redis (caching & distributed locking), reliably processing lakhs of logistics and financial transactions daily.',
+          detailLabel: '',
+          detailBody: '',
+          pipeline: ['API Gateway', '15+ Microservices', 'Kafka Event Bus + Redis Cache/Locks', 'Polyglot Datastores'],
+          tags: ['Apache Kafka', 'Redis', 'Microservices', 'Distributed Systems']
         }
       };
 
@@ -1772,9 +1387,10 @@
       const sysTitle = document.getElementById('sys-title');
       const sysBadges = document.getElementById('sys-badges');
       const sysOverview = document.getElementById('sys-overview');
+      const sysDetailWrap = document.getElementById('sys-detail-wrap');
+      const sysDetailLabel = document.getElementById('sys-detail-label');
+      const sysDetailBody = document.getElementById('sys-detail-body');
       const sysPipeline = document.getElementById('sys-pipeline');
-      const sysDeepDive = document.getElementById('sys-deepdive');
-      const sysImpact = document.getElementById('sys-impact');
       const sysTags = document.getElementById('sys-tags');
       const sysButtons = document.querySelectorAll('[data-sys]');
 
@@ -1785,15 +1401,21 @@
         sysFilename.textContent = s.filename;
         sysTitle.textContent = s.title;
         sysOverview.textContent = s.overview;
-        sysDeepDive.textContent = s.deepDive;
-        sysImpact.textContent = s.impact;
+
+        if (s.detailBody) {
+          sysDetailWrap.style.display = 'block';
+          sysDetailLabel.textContent = s.detailLabel;
+          sysDetailBody.textContent = s.detailBody;
+        } else {
+          sysDetailWrap.style.display = 'none';
+        }
 
         sysBadges.innerHTML = '';
-        s.badges.forEach(function (badgeText, idx) {
+        s.badges.forEach(function (text, idx) {
           const b = document.createElement('span');
           b.className = 'font-mono-ui text-[10.5px] uppercase tracking-wider px-2.5 py-1 rounded-full border ' +
             (idx === 0 ? 't-accent-badge' : 't-secondary-badge');
-          b.textContent = badgeText;
+          b.textContent = text;
           sysBadges.appendChild(b);
         });
 
@@ -1833,9 +1455,11 @@
       renderSystem('dynamodb');
 
       /* ----------------------------------------------------------------------
-         G. ONE-CLICK EMAIL COPY WITH TOAST FEEDBACK (IFRAME-SAFE)
+         F. ONE-CLICK EMAIL COPY (IFRAME-SAFE)
          ---------------------------------------------------------------------- */
       const EMAIL = 'myanurag0202@gmail.com';
+      const copyBtn = document.getElementById('copy-email-btn');
+      const copyLabel = document.getElementById('copy-email-label');
       const toastEl = document.getElementById('toast-pill');
       let toastTimer = null;
 
@@ -1848,37 +1472,31 @@
         toastTimer = setTimeout(function () {
           toastEl.classList.add('opacity-0', '-translate-y-2');
           toastEl.classList.remove('opacity-100', 'translate-y-0');
-        }, 2100);
+        }, 2000);
       }
 
-      function copyEmail() {
-        try {
-          const ta = document.createElement('textarea');
-          ta.value = EMAIL;
-          ta.setAttribute('readonly', '');
-          ta.style.position = 'fixed';
-          ta.style.top = '-9999px';
-          document.body.appendChild(ta);
-          ta.select();
-          ta.setSelectionRange(0, EMAIL.length);
-          const ok = document.execCommand('copy');
-          document.body.removeChild(ta);
-          if (ok) {
-            showToast('Copied ' + EMAIL);
-            return;
+      if (copyBtn) {
+        copyBtn.addEventListener('click', function () {
+          try {
+            const ta = document.createElement('textarea');
+            ta.value = EMAIL;
+            ta.setAttribute('readonly', '');
+            ta.style.position = 'fixed';
+            ta.style.top = '-9999px';
+            document.body.appendChild(ta);
+            ta.select();
+            ta.setSelectionRange(0, EMAIL.length);
+            document.execCommand('copy');
+            document.body.removeChild(ta);
+          } catch (e) {}
+
+          if (copyLabel) {
+            copyLabel.textContent = 'Copied!';
+            setTimeout(function () { copyLabel.textContent = 'Copy Email'; }, 2000);
           }
-        } catch (err) {}
-
-        if (navigator.clipboard && navigator.clipboard.writeText) {
-          navigator.clipboard.writeText(EMAIL)
-            .then(function () { showToast('Copied ' + EMAIL); })
-            .catch(function () { showToast(EMAIL); });
-        }
+          showToast('Copied ' + EMAIL);
+        });
       }
-
-      document.querySelectorAll('[data-copy-email]').forEach(function (btn) {
-        btn.addEventListener('click', copyEmail);
-      });
     })();
   </script>
 </body>
